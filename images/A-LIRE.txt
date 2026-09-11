@@ -1,9 +1,0 @@
-# Photos du site
-
-Deposez ici vos images (memes noms que ceux attendus par index.html) :
-
-- hero.jpg (grande photo d accueil)
-- gite-1.jpg, gite-2.jpg (les gites)
-- galerie-1.jpg a galerie-6.jpg
-
-Format conseille : JPG, largeur ~1600px, orientation paysage.
