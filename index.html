@@ -2,24 +2,25 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chez Ninou · Gîtes de charme dans le Vallespir</title>
-  <meta name="description" content="Chez Ninou · trois gîtes de charme au cœur du Vallespir (Pyrénées-Orientales), avec jardin arboré et piscine. Entre mer et montagne, un séjour au calme.">
-  <meta name="theme-color" content="#f7f2e9">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Chez Ninou · Gîtes 360° à Les Cluses, Pyrénées-Orientales</title>
+  <meta name="description" content="Chez Ninou : trois gîtes pour deux personnes avec jardin arboré et piscine à Les Cluses, aux portes de l’Espagne. Visitez-les en 360° avant même d’arriver.">
+  <meta name="theme-color" content="#1c1916">
 
   <!-- Partage réseaux sociaux -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Chez Ninou · Gîtes de charme dans le Vallespir">
-  <meta property="og:description" content="Trois gîtes au calme, avec jardin arboré et piscine, au cœur du Vallespir. Entre mer et montagne.">
-  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:title" content="Chez Ninou · Gîtes 360° à Les Cluses">
+  <meta property="og:description" content="Trois gîtes pour deux, un jardin arboré et une piscine, aux portes de l’Espagne. Visite virtuelle 360° en direct.">
+  <meta property="og:image" content="images/visite-poster.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23b56a4a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='600' fill='%23f7f2e9'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23b4603d'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='600' fill='%23f5efe4'%3EN%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://geasy.fr">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -27,8 +28,8 @@
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "Chez Ninou",
-    "description": "Trois gîtes de charme avec jardin arboré et piscine au cœur du Vallespir, Pyrénées-Orientales.",
-    "image": "images/hero.jpg",
+    "description": "Trois gîtes pour deux personnes avec jardin arboré et piscine à Les Cluses, Pyrénées-Orientales, aux portes de l’Espagne.",
+    "image": "images/visite-poster.jpg",
     "telephone": "+33674453766",
     "email": "chezninou66@gmail.com",
     "address": { "@type": "PostalAddress", "streetAddress": "14 avenue Virginie", "postalCode": "66480", "addressLocality": "Les Cluses", "addressRegion": "Occitanie", "addressCountry": "FR" },
@@ -43,282 +44,408 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#bienvenue">Aller au contenu</a>
+  <a class="skip-link" href="#intro">Aller au contenu</a>
 
-  <header class="site-header" id="haut">
-    <div class="wrap header-inner">
-      <a class="logo" href="#haut">Chez&nbsp;Ninou</a>
-      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav" id="menu">
+  <!-- EN-TÊTE -->
+  <header class="entete" id="entete">
+    <div class="entete-inner">
+      <a class="logo" href="#haut">Chez <em>Ninou</em></a>
+      <nav class="nav-bureau" aria-label="Navigation principale">
         <a href="#gites">Les gîtes</a>
         <a href="#visite">Visite 360°</a>
         <a href="#galerie">Galerie</a>
-        <a href="#alentours">Les alentours</a>
-        <a href="#infos">Bon à savoir</a>
+        <a href="#alentours">Alentours</a>
+        <a href="#infos">Infos</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-mini">Réserver</a>
       </nav>
+      <div class="entete-actions">
+        <a href="tel:+33674453766" class="entete-tel">06 74 45 37 66</a>
+        <a href="#contact" class="btn btn-mini">Réserver</a>
+        <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="wrap hero-content">
-      <p class="kicker">Gîtes de charme · Vallespir · Pyrénées-Orientales</p>
-      <h1>Posez vos valises,<br>respirez.</h1>
-      <p class="hero-sous">Trois gîtes au calme, avec jardin arboré et piscine, au cœur du Vallespir. Entre mer et montagne. Bienvenue chez Ninou.</p>
-      <div class="hero-actions">
-        <a href="#gites" class="btn">Découvrir les gîtes</a>
-        <a href="#contact" class="btn btn-ghost">Réserver un séjour</a>
-      </div>
+  <div class="menu-mobile" id="menu-mobile" hidden>
+    <nav aria-label="Navigation mobile">
+      <a href="#gites"><small>01</small> Les gîtes</a>
+      <a href="#visite"><small>02</small> Visite 360°</a>
+      <a href="#galerie"><small>03</small> Galerie</a>
+      <a href="#alentours"><small>04</small> Alentours</a>
+      <a href="#infos"><small>05</small> Bon à savoir</a>
+      <a href="#contact"><small>06</small> Contact</a>
+    </nav>
+    <div class="menu-mobile-bas">
+      <a href="tel:+33674453766">06 74 45 37 66</a>
+      <a href="mailto:chezninou66@gmail.com">chezninou66@gmail.com</a>
+      <a href="#contact" class="btn">Réserver un séjour</a>
     </div>
-    <a class="hero-scroll" href="#bienvenue" aria-label="Défiler vers le bas">↓</a>
-  </section>
+  </div>
 
-  <!-- BIENVENUE -->
-  <section class="section" id="bienvenue">
-    <div class="wrap deux-cols">
-      <div class="reveal">
-        <p class="etiq">Bienvenue</p>
-        <h2>Une maison de caractère, un jardin, une piscine</h2>
-        <p>Nichée au bout d'une impasse tranquille des Cluses, aux portes de l'Espagne, notre maison aux jolies arches méditerranéennes abrite trois gîtes indépendants. Tous partagent un grand jardin arboré, une terrasse couverte avec vue sur les collines et une piscine pour les beaux jours.</p>
-        <p>Chaque gîte est climatisé, équipé d'un coin cuisine et d'une salle d'eau : vous êtes autonomes, comme à la maison. Idéal pour rayonner entre plages de la Côte Vermeille, villages catalans et sentiers de montagne.</p>
-        <p class="signature">— Ninou, votre hôte</p>
+  <main>
+
+    <!-- HERO : la visite virtuelle en plein écran -->
+    <section class="hero" id="haut">
+      <div class="hero-tour">
+        <img class="hero-poster" src="images/visite-poster.jpg" alt="" aria-hidden="true">
+        <iframe class="hero-iframe" title="Visite virtuelle 360° de Chez Ninou" allow="fullscreen; gyroscope; accelerometer; xr-spatial-tracking" allowfullscreen></iframe>
       </div>
-      <ul class="atouts reveal">
-        <li><span class="ico">✦</span> Piscine partagée</li>
-        <li><span class="ico">✦</span> Jardin arboré &amp; terrasse couverte</li>
-        <li><span class="ico">✦</span> Climatisation</li>
-        <li><span class="ico">✦</span> Wifi fibre gratuit</li>
-        <li><span class="ico">✦</span> Parking privé (portail motorisé)</li>
-        <li><span class="ico">✦</span> Laverie sur place</li>
+
+      <div class="hero-voile">
+        <div class="hero-texte">
+          <p class="kicker">Les Cluses · Pyrénées-Orientales</p>
+          <h1>Posez vos valises,<br><em>vous êtes chez Ninou.</em></h1>
+          <p class="hero-sous">Trois gîtes pour deux, un jardin arboré et une piscine, aux portes de l’Espagne. Visitez-les en 360° avant même d’arriver.</p>
+          <div class="hero-actions">
+            <button type="button" class="btn btn-grand" id="explorer"><span class="btn-ico">360°</span> Explorer la visite</button>
+            <a href="#gites" class="btn btn-ghost btn-grand">Découvrir les gîtes</a>
+          </div>
+        </div>
+        <div class="hero-bas">
+          <span class="badge-live"><i></i><span class="badge-texte">Chargement de la visite virtuelle…</span></span>
+          <a href="#intro" class="hero-scroll" aria-label="Défiler vers le contenu">Défiler <span>↓</span></a>
+        </div>
+      </div>
+
+      <div class="hero-controles" hidden>
+        <div class="scenes-chips" role="group" aria-label="Choisir un point de départ">
+          <button type="button" class="chip actif" data-scene="" aria-pressed="true">Vue d’ensemble</button>
+          <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Le Studio</button>
+          <button type="button" class="chip" data-scene="blanc_1" aria-pressed="false">Gîte Bleu</button>
+          <button type="button" class="chip" data-scene="rouge_1" aria-pressed="false">Gîte Rose</button>
+          <button type="button" class="chip" data-scene="piscine" aria-pressed="false">Piscine</button>
+        </div>
+        <span class="controles-sep" aria-hidden="true"></span>
+        <button type="button" class="ctrl" id="hero-plein-ecran" title="Plein écran">⛶<span class="ctrl-texte"> Plein écran</span></button>
+        <button type="button" class="ctrl ctrl-fermer" id="quitter">✕<span class="ctrl-texte"> Quitter la visite</span></button>
+      </div>
+    </section>
+
+    <!-- CHIFFRES CLÉS -->
+    <section class="bandeau" aria-label="En bref">
+      <ul class="stats wrap">
+        <li><strong>3</strong><span>gîtes indépendants</span></li>
+        <li><strong>2</strong><span>personnes par gîte</span></li>
+        <li><strong>1</strong><span>piscine partagée</span></li>
+        <li><strong>5 min</strong><span>de l’Espagne</span></li>
+        <li><strong>30 min</strong><span>des plages</span></li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- LES GÎTES -->
-  <section class="section section-alt" id="gites">
-    <div class="wrap">
-      <p class="etiq center">Nos hébergements</p>
-      <h2 class="center">Les trois gîtes</h2>
-      <p class="intro center">Trois studios chaleureux pour deux personnes, tout équipés, autour du même jardin et de la piscine.</p>
+    <!-- BIENVENUE -->
+    <section class="section" id="intro">
+      <div class="wrap deux-cols">
+        <div class="reveal">
+          <p class="etiq">Bienvenue</p>
+          <h2>Une maison catalane, un grand jardin, <em>une piscine pour tous.</em></h2>
+          <p>Nichée au bout d’une impasse tranquille des Cluses, notre maison aux arches méditerranéennes abrite trois gîtes indépendants. Tous partagent un jardin arboré, une terrasse couverte avec vue sur les collines et une piscine pour les beaux jours.</p>
+          <p>Chaque gîte est climatisé, avec coin cuisine et salle d’eau : vous êtes autonomes, comme à la maison. Et pour tout voir avant de réserver, la maison entière se visite en 360°.</p>
+          <ul class="atouts">
+            <li>Piscine partagée</li>
+            <li>Jardin &amp; terrasse couverte</li>
+            <li>Climatisation</li>
+            <li>Wifi fibre gratuit</li>
+            <li>Parking privé, portail motorisé</li>
+            <li>Laverie sur place</li>
+          </ul>
+          <p class="signature">Ninou, votre hôte</p>
+        </div>
+        <div class="collage reveal">
+          <div class="collage-grande"><img src="images/hero.jpg" alt="Le jardin arboré, la table de pique-nique et les fenêtres aux grilles turquoise" loading="lazy"></div>
+          <div class="collage-petite"><img src="images/terrasse.jpg" alt="La terrasse couverte" loading="lazy"></div>
+          <span class="collage-etiquette">Le jardin, l’été</span>
+        </div>
+      </div>
+    </section>
 
-      <div class="cartes">
-        <article class="carte-gite reveal">
-          <a class="carte-photo" href="images/studio.jpg" data-lightbox data-caption="Le Studio">
-            <img src="images/studio.jpg" alt="Le Studio : lit double, arches en pierre, coin cuisine et salle d'eau" loading="lazy">
-          </a>
-          <div class="carte-corps">
-            <h3>Le Studio</h3>
-            <p class="carte-meta">2 personnes · classé Meublé de tourisme 1★ · rez-de-chaussée</p>
-            <p>Studio de plain-pied, lit double, coin cuisine équipé et salle d'eau. Climatisation, accès direct au jardin.</p>
-            <ul class="equip">
-              <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li>
-            </ul>
-            <p class="carte-prix"><strong>Tarif sur demande</strong></p>
-            <div class="carte-actions">
-              <a href="#contact" class="btn btn-mini" data-gite="Le Studio">Demander les dates</a>
-              <a href="#visite" class="lien-visite" data-visite="chambre_rdc_1">Visite 360°</a>
+    <!-- LES GÎTES -->
+    <section class="section section-alt" id="gites">
+      <div class="wrap">
+        <div class="section-tete">
+          <p class="etiq">Nos hébergements</p>
+          <h2>Trois gîtes, <em>trois ambiances.</em></h2>
+          <p class="intro">Des studios chaleureux pour deux personnes, tout équipés, autour du même jardin et de la piscine. Chacun se visite en 360°.</p>
+        </div>
+
+        <div class="gites-liste">
+          <article class="gite reveal">
+            <a class="gite-photo" href="images/studio.jpg" data-lightbox data-caption="Le Studio">
+              <img src="images/studio.jpg" alt="Le Studio : lit double, arches en pierre, coin cuisine et salle d’eau" loading="lazy">
+              <span class="gite-photo-badge">Agrandir</span>
+            </a>
+            <div class="gite-texte">
+              <span class="num">01</span>
+              <h3>Le Studio</h3>
+              <p class="gite-meta">2 personnes · rez-de-chaussée · meublé de tourisme 1★</p>
+              <p>De plain-pied, avec ses arches en pierre et son accès direct au jardin. Lit double, coin cuisine équipé, salle d’eau avec douche à l’italienne et climatisation.</p>
+              <ul class="equip">
+                <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li><li>Accès jardin</li>
+              </ul>
+              <div class="gite-actions">
+                <button type="button" class="btn" data-visite="chambre_rdc_1"><span class="btn-ico">360°</span> Visiter le Studio</button>
+                <a href="#contact" class="lien-fleche" data-gite="Le Studio">Demander les dates</a>
+              </div>
+              <p class="gite-prix">Tarif sur demande</p>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="carte-gite reveal">
-          <a class="carte-photo" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu">
-            <img src="images/gite-bleu.jpg" alt="Le Gîte Bleu : lit double, coin cuisine et coin repas aux tons bleus" loading="lazy">
-          </a>
-          <div class="carte-corps">
-            <h3>Le Gîte Bleu</h3>
-            <p class="carte-meta">2 personnes · coin cuisine · salle d'eau</p>
-            <p>Ambiance marine et lumineuse, lit double, coin repas, cuisine équipée et climatisation.</p>
-            <ul class="equip">
-              <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Accès jardin</li>
-            </ul>
-            <p class="carte-prix"><strong>Tarif sur demande</strong></p>
-            <div class="carte-actions">
-              <a href="#contact" class="btn btn-mini" data-gite="Le Gîte Bleu">Demander les dates</a>
-              <a href="#visite" class="lien-visite" data-visite="blanc_1">Visite 360°</a>
+          <article class="gite reveal">
+            <a class="gite-photo" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu">
+              <img src="images/gite-bleu.jpg" alt="Le Gîte Bleu : lit double, coin cuisine et coin repas aux tons bleus" loading="lazy">
+              <span class="gite-photo-badge">Agrandir</span>
+            </a>
+            <div class="gite-texte">
+              <span class="num">02</span>
+              <h3>Le Gîte Bleu</h3>
+              <p class="gite-meta">2 personnes · coin cuisine · salle d’eau</p>
+              <p>Une ambiance marine, claire et apaisante. Lit double, coin repas, cuisine équipée, salle d’eau et climatisation.</p>
+              <ul class="equip">
+                <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li><li>Coin repas</li>
+              </ul>
+              <div class="gite-actions">
+                <button type="button" class="btn" data-visite="blanc_1"><span class="btn-ico">360°</span> Visiter le Gîte Bleu</button>
+                <a href="#contact" class="lien-fleche" data-gite="Le Gîte Bleu">Demander les dates</a>
+              </div>
+              <p class="gite-prix">Tarif sur demande</p>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="carte-gite reveal">
-          <a class="carte-photo" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose">
-            <img src="images/gite-rose.jpg" alt="Le Gîte Rose : lit double, coin repas et rideaux roses" loading="lazy">
-          </a>
-          <div class="carte-corps">
-            <h3>Le Gîte Rose</h3>
-            <p class="carte-meta">2 personnes · coin cuisine · salle d'eau</p>
-            <p>Un cocon chaleureux aux tons rosés, lit double, coin repas, cuisine équipée et climatisation. Accès à la terrasse couverte.</p>
-            <ul class="equip">
-              <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Terrasse</li>
-            </ul>
-            <p class="carte-prix"><strong>Tarif sur demande</strong></p>
-            <div class="carte-actions">
-              <a href="#contact" class="btn btn-mini" data-gite="Le Gîte Rose">Demander les dates</a>
-              <a href="#visite" class="lien-visite" data-visite="rouge_1">Visite 360°</a>
+          <article class="gite reveal">
+            <a class="gite-photo" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose">
+              <img src="images/gite-rose.jpg" alt="Le Gîte Rose : lit double, coin repas et rideaux roses" loading="lazy">
+              <span class="gite-photo-badge">Agrandir</span>
+            </a>
+            <div class="gite-texte">
+              <span class="num">03</span>
+              <h3>Le Gîte Rose</h3>
+              <p class="gite-meta">2 personnes · coin cuisine · salle d’eau</p>
+              <p>Un cocon chaleureux aux tons rosés, ouvert sur la terrasse couverte. Lit double, coin repas, cuisine équipée, salle d’eau et climatisation.</p>
+              <ul class="equip">
+                <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li><li>Terrasse</li>
+              </ul>
+              <div class="gite-actions">
+                <button type="button" class="btn" data-visite="rouge_1"><span class="btn-ico">360°</span> Visiter le Gîte Rose</button>
+                <a href="#contact" class="lien-fleche" data-gite="Le Gîte Rose">Demander les dates</a>
+              </div>
+              <p class="gite-prix">Tarif sur demande</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISITE 360° : choisir une pièce -->
+    <section class="section section-dark" id="visite">
+      <div class="wrap">
+        <div class="section-tete">
+          <p class="etiq">Visite virtuelle</p>
+          <h2>Choisissez une pièce, <em>on vous y emmène.</em></h2>
+          <p class="intro">Trente-deux panoramas pour parcourir la maison, le jardin et la piscine comme si vous y étiez. Ouvrez la visite en plein écran, puis déplacez-vous librement.</p>
+        </div>
+        <div class="scenes reveal">
+          <button type="button" class="scene" data-visite="">
+            <img src="images/visite-poster.jpg" alt="" loading="lazy">
+            <span class="scene-nom">Vue d’ensemble</span><span class="scene-360">360°</span>
+          </button>
+          <button type="button" class="scene" data-visite="chambre_rdc_1">
+            <img src="images/studio.jpg" alt="" loading="lazy">
+            <span class="scene-nom">Le Studio</span><span class="scene-360">360°</span>
+          </button>
+          <button type="button" class="scene" data-visite="blanc_1">
+            <img src="images/gite-bleu.jpg" alt="" loading="lazy">
+            <span class="scene-nom">Le Gîte Bleu</span><span class="scene-360">360°</span>
+          </button>
+          <button type="button" class="scene" data-visite="rouge_1">
+            <img src="images/gite-rose.jpg" alt="" loading="lazy">
+            <span class="scene-nom">Le Gîte Rose</span><span class="scene-360">360°</span>
+          </button>
+          <button type="button" class="scene" data-visite="piscine">
+            <img src="images/piscine.jpg" alt="" loading="lazy">
+            <span class="scene-nom">La piscine</span><span class="scene-360">360°</span>
+          </button>
+        </div>
+        <p class="center visite-note"><a href="https://geasy.fr/chez-ninou/" target="_blank" rel="noopener">Ouvrir la visite dans un nouvel onglet</a> · Glissez pour regarder autour de vous, touchez les cercles au sol pour avancer.</p>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="section" id="galerie">
+      <div class="wrap">
+        <div class="section-tete">
+          <p class="etiq">En images</p>
+          <h2>La maison, <em>en photos.</em></h2>
+          <p class="intro">Un aperçu des intérieurs, du jardin et de la piscine. Cliquez pour agrandir.</p>
+        </div>
+        <div class="galerie">
+          <a class="g-item reveal" href="images/studio.jpg" data-lightbox data-caption="Le Studio et ses arches en pierre"><img src="images/studio.jpg" alt="Le Studio et ses arches en pierre" loading="lazy"></a>
+          <a class="g-item reveal" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu"><img src="images/gite-bleu.jpg" alt="Le Gîte Bleu" loading="lazy"></a>
+          <a class="g-item reveal" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose"><img src="images/gite-rose.jpg" alt="Le Gîte Rose" loading="lazy"></a>
+          <a class="g-item reveal" href="images/chambre.jpg" data-lightbox data-caption="Le Studio, côté jardin"><img src="images/chambre.jpg" alt="Le Studio, côté jardin" loading="lazy"></a>
+          <a class="g-item reveal" href="images/cuisine.jpg" data-lightbox data-caption="Coin cuisine équipé"><img src="images/cuisine.jpg" alt="Coin cuisine équipé" loading="lazy"></a>
+          <a class="g-item reveal" href="images/salle-eau.jpg" data-lightbox data-caption="Salle d’eau avec douche à l’italienne"><img src="images/salle-eau.jpg" alt="Salle d’eau avec douche à l’italienne" loading="lazy"></a>
+          <a class="g-item reveal" href="images/terrasse.jpg" data-lightbox data-caption="La terrasse couverte"><img src="images/terrasse.jpg" alt="La terrasse couverte" loading="lazy"></a>
+          <a class="g-item reveal" href="images/hero.jpg" data-lightbox data-caption="Le jardin arboré"><img src="images/hero.jpg" alt="Le jardin arboré" loading="lazy"></a>
+          <a class="g-item reveal" href="images/visite-poster.jpg" data-lightbox data-caption="La maison, le jardin et la piscine vus du ciel"><img src="images/visite-poster.jpg" alt="La maison, le jardin et la piscine vus du ciel" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALENTOURS -->
+    <section id="alentours">
+      <div class="bande">
+        <div class="wrap">
+          <p class="etiq etiq-clair">À voir autour</p>
+          <h2>Entre mer et montagne,<br>à cinq minutes de l’Espagne.</h2>
+        </div>
+      </div>
+      <div class="section section-alt">
+        <div class="wrap cartes-3">
+          <div class="carte-info reveal">
+            <svg class="carte-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 38 18 14l8 13 5-7 13 18Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="36" cy="11" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3>Montagne &amp; nature</h3>
+            <p>Le massif du Canigó, les sentiers et rivières du Vallespir, les thermes d’Amélie-les-Bains. L’air pur et les grands espaces.</p>
+            <ul class="distances">
+              <li><span>Le Boulou</span><span>5 min</span></li>
+              <li><span>Céret</span><span>15 min</span></li>
+              <li><span>Amélie-les-Bains</span><span>20 min</span></li>
+            </ul>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- VISITE VIRTUELLE -->
-  <section class="section section-dark" id="visite">
-    <div class="wrap">
-      <p class="etiq center">Visite virtuelle 360°</p>
-      <h2 class="center">Visitez comme si vous y étiez</h2>
-      <p class="intro center">Déplacez-vous librement dans les trois gîtes, le jardin et la piscine. Choisissez un point de départ, puis lancez la visite.</p>
-      <div class="visite-choix">
-        <button type="button" class="chip actif" data-scene="" aria-pressed="true">Vue d'ensemble</button>
-        <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Le Studio</button>
-        <button type="button" class="chip" data-scene="blanc_1" aria-pressed="false">Le Gîte Bleu</button>
-        <button type="button" class="chip" data-scene="rouge_1" aria-pressed="false">Le Gîte Rose</button>
-        <button type="button" class="chip" data-scene="piscine" aria-pressed="false">La piscine</button>
-      </div>
-      <div class="visite-cadre">
-        <img class="visite-poster" src="images/visite-poster.jpg" alt="Vue aérienne de la maison, du jardin et de la piscine" loading="lazy">
-        <button type="button" class="visite-lancer"><span class="play">▶</span> Lancer la visite 360°</button>
-        <iframe title="Visite virtuelle 360° de Chez Ninou" allow="fullscreen; gyroscope; accelerometer; xr-spatial-tracking" allowfullscreen hidden></iframe>
-      </div>
-      <p class="center visite-note"><a href="https://geasy.fr/chez-ninou/" target="_blank" rel="noopener">Ouvrir la visite en plein écran</a> · Glissez pour regarder autour de vous, touchez les flèches pour avancer.</p>
-    </div>
-  </section>
-
-  <!-- GALERIE -->
-  <section class="section" id="galerie">
-    <div class="wrap">
-      <p class="etiq center">En images</p>
-      <h2 class="center">Galerie</h2>
-      <p class="intro center">Un aperçu des intérieurs, du jardin et de la piscine. Cliquez pour agrandir.</p>
-      <div class="galerie">
-        <a class="g-item reveal" href="images/studio.jpg" data-lightbox data-caption="Le Studio et ses arches en pierre">
-          <img src="images/studio.jpg" alt="Le Studio et ses arches en pierre" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu">
-          <img src="images/gite-bleu.jpg" alt="Le Gîte Bleu" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose">
-          <img src="images/gite-rose.jpg" alt="Le Gîte Rose" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/chambre.jpg" data-lightbox data-caption="Le Studio, côté jardin">
-          <img src="images/chambre.jpg" alt="Le Studio, côté jardin" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/cuisine.jpg" data-lightbox data-caption="Coin cuisine équipé">
-          <img src="images/cuisine.jpg" alt="Coin cuisine équipé" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/salle-eau.jpg" data-lightbox data-caption="Salle d'eau avec douche à l'italienne">
-          <img src="images/salle-eau.jpg" alt="Salle d'eau avec douche à l'italienne" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/terrasse.jpg" data-lightbox data-caption="La terrasse couverte">
-          <img src="images/terrasse.jpg" alt="La terrasse couverte" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/hero.jpg" data-lightbox data-caption="Le jardin arboré">
-          <img src="images/hero.jpg" alt="Le jardin arboré" loading="lazy">
-        </a>
-        <a class="g-item reveal" href="images/visite-poster.jpg" data-lightbox data-caption="La maison, le jardin et la piscine vus du ciel">
-          <img src="images/visite-poster.jpg" alt="La maison, le jardin et la piscine vus du ciel" loading="lazy">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ALENTOURS -->
-  <section class="section section-alt" id="alentours">
-    <div class="wrap">
-      <p class="etiq center">À voir autour</p>
-      <h2 class="center">Le Vallespir &amp; les environs</h2>
-      <div class="cartes trois">
-        <div class="carte-info reveal">
-          <h3>Montagne &amp; nature</h3>
-          <p>Le massif du Canigó, les sentiers et rivières du Vallespir, les thermes d'Amélie-les-Bains et Le Boulou à quelques minutes. L'air pur et les grands espaces.</p>
-        </div>
-        <div class="carte-info reveal">
-          <h3>Mer &amp; villages catalans</h3>
-          <p>Céret et son art moderne, ses fameuses cerises, et les plages de la Côte Vermeille (Argelès, Collioure) à environ une demi-heure de route.</p>
-        </div>
-        <div class="carte-info reveal">
-          <h3>Espagne &amp; terroir</h3>
-          <p>La frontière espagnole toute proche, les marchés, les vignobles et la gastronomie catalane. De quoi remplir chaque journée de découvertes.</p>
+          <div class="carte-info reveal">
+            <svg class="carte-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 30c5-6 10-6 15 0s10 6 15 0 10-6 10 0M4 38c5-6 10-6 15 0s10 6 15 0 10-6 10 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="34" cy="13" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3>Mer &amp; villages catalans</h3>
+            <p>Céret et son art moderne, les plages de sable d’Argelès, les criques et le charme de Collioure sur la Côte Vermeille.</p>
+            <ul class="distances">
+              <li><span>Argelès-sur-Mer</span><span>25 min</span></li>
+              <li><span>Perpignan</span><span>30 min</span></li>
+              <li><span>Collioure</span><span>35 min</span></li>
+            </ul>
+          </div>
+          <div class="carte-info reveal">
+            <svg class="carte-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="26" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="30" cy="26" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="36" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 20V8m0 0c4 0 7 2 9 5M24 8c-4 0-7 2-9 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>Espagne &amp; terroir</h3>
+            <p>La frontière est à deux pas : marchés du Perthus, Figueres et son musée Dalí, vignobles et gastronomie catalane des deux côtés.</p>
+            <ul class="distances">
+              <li><span>Le Perthus</span><span>5 min</span></li>
+              <li><span>La Jonquera</span><span>10 min</span></li>
+              <li><span>Figueres</span><span>30 min</span></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BON À SAVOIR -->
-  <section class="section" id="infos">
-    <div class="wrap">
-      <p class="etiq center">Infos pratiques</p>
-      <h2 class="center">Bon à savoir</h2>
-      <p class="intro center">Les petites choses utiles avant d'arriver. <span class="mini-note">(Horaires et conditions à confirmer.)</span></p>
-      <dl class="infos reveal">
-        <div><dt>Arrivée &amp; départ</dt><dd>Arrivée à partir de [16h], départ avant [10h]. <span class="mini-note">[à compléter]</span></dd></div>
-        <div><dt>Linge &amp; ménage</dt><dd>Draps et serviettes [fournis / en option]. <span class="mini-note">[à compléter]</span></dd></div>
-        <div><dt>Piscine</dt><dd>Piscine partagée entre les gîtes, ouverte à la belle saison. Les enfants restent sous la surveillance des parents.</dd></div>
-        <div><dt>Animaux</dt><dd>[Acceptés sur demande / non acceptés]. <span class="mini-note">[à compléter]</span></dd></div>
-        <div><dt>Accès</dt><dd>14 avenue Virginie, Les Cluses, à 5 minutes de la sortie Le Boulou de l'A9 et de la frontière espagnole. Parking privé avec portail motorisé.</dd></div>
-        <div><dt>Paiement</dt><dd>Acompte à la réservation, solde à l'arrivée. Taxe de séjour en sus. <span class="mini-note">[à confirmer]</span></dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
-    <div class="wrap deux-cols deux-cols-top">
-      <div class="reveal">
-        <p class="etiq">Réservation &amp; contact</p>
-        <h2>Envie de venir&nbsp;?</h2>
-        <p>Pour connaître les disponibilités et réserver le gîte qui vous plaît, contactez-nous directement. On vous répond avec plaisir.</p>
-        <ul class="contact-liste">
-          <li><span class="ico">✆</span> <a href="tel:+33674453766">06 74 45 37 66</a></li>
-          <li><span class="ico">✉</span> <a href="mailto:chezninou66@gmail.com" class="lien-email">chezninou66@gmail.com</a></li>
-          <li><span class="ico">⌖</span> <a href="https://www.google.com/maps/search/?api=1&query=14+Avenue+Virginie+66480+Les+Cluses" target="_blank" rel="noopener">14 avenue Virginie · 66480 Les Cluses</a></li>
-        </ul>
-        <p class="mini-note">Le formulaire prépare un e-mail dans votre messagerie : rien n'est envoyé sans votre accord.</p>
-      </div>
-
-      <form class="carte-resa reveal" id="form-resa" novalidate>
-        <h3>Demande de réservation</h3>
-        <div class="champs">
-          <label>Votre nom<input type="text" name="nom" required autocomplete="name"></label>
-          <label>Votre e-mail<input type="email" name="email" required autocomplete="email"></label>
-          <label>Gîte souhaité
-            <select name="gite">
-              <option>Peu importe</option>
-              <option>Le Studio</option>
-              <option>Le Gîte Bleu</option>
-              <option>Le Gîte Rose</option>
-            </select>
-          </label>
-          <label>Personnes<input type="number" name="personnes" min="1" max="2" value="2"></label>
-          <label>Arrivée<input type="date" name="arrivee" required></label>
-          <label>Départ<input type="date" name="depart" required></label>
-          <label class="pleine">Message<textarea name="message" rows="3" placeholder="Une question, un souhait particulier…"></textarea></label>
+    <!-- BON À SAVOIR -->
+    <section class="section" id="infos">
+      <div class="wrap">
+        <div class="section-tete">
+          <p class="etiq">Infos pratiques</p>
+          <h2>Bon à savoir <em>avant d’arriver.</em></h2>
         </div>
-        <p class="form-erreur" role="alert" hidden></p>
-        <button type="submit" class="btn">Envoyer la demande</button>
-      </form>
-    </div>
-  </section>
+        <dl class="infos reveal">
+          <div><dt>Arrivée &amp; départ</dt><dd>Arrivée à partir de [16h], départ avant [10h]. <span class="mini-note">[à compléter]</span></dd></div>
+          <div><dt>Linge &amp; ménage</dt><dd>Draps et serviettes [fournis / en option]. <span class="mini-note">[à compléter]</span></dd></div>
+          <div><dt>Piscine</dt><dd>Partagée entre les gîtes, ouverte à la belle saison. Les enfants restent sous la surveillance des parents.</dd></div>
+          <div><dt>Animaux</dt><dd>[Acceptés sur demande / non acceptés]. <span class="mini-note">[à compléter]</span></dd></div>
+          <div><dt>Accès</dt><dd>14 avenue Virginie, Les Cluses, à 5 minutes de la sortie Le Boulou de l’A9 et de la frontière. Parking privé avec portail motorisé.</dd></div>
+          <div><dt>Paiement</dt><dd>Acompte à la réservation, solde à l’arrivée. Taxe de séjour en sus. <span class="mini-note">[à confirmer]</span></dd></div>
+        </dl>
+      </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <span>Chez Ninou · 14 avenue Virginie, 66480 Les Cluses · <a href="tel:+33674453766">06 74 45 37 66</a></span>
-      <nav class="footer-nav">
-        <a href="#gites">Les gîtes</a>
-        <a href="#visite">Visite 360°</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <span class="mini-note">© <span id="annee"></span> · Site réalisé avec soin</span>
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="wrap deux-cols deux-cols-top">
+        <div class="reveal">
+          <p class="etiq">Réservation &amp; contact</p>
+          <h2>Envie de venir&nbsp;? <em>Écrivez-nous.</em></h2>
+          <p>Pour connaître les disponibilités et réserver le gîte qui vous plaît, contactez-nous directement. On vous répond avec plaisir, et vite.</p>
+          <ul class="contact-liste">
+            <li><span class="contact-cle">Téléphone</span><a href="tel:+33674453766">06 74 45 37 66</a></li>
+            <li><span class="contact-cle">E-mail</span><a href="mailto:chezninou66@gmail.com">chezninou66@gmail.com</a></li>
+            <li><span class="contact-cle">Adresse</span><a href="https://www.google.com/maps/search/?api=1&query=14+Avenue+Virginie+66480+Les+Cluses" target="_blank" rel="noopener">14 avenue Virginie, 66480 Les Cluses</a></li>
+          </ul>
+          <p class="mini-note">Le formulaire prépare un e-mail dans votre messagerie : rien n’est envoyé sans votre accord.</p>
+        </div>
+
+        <form class="carte-resa reveal" id="form-resa" novalidate>
+          <h3>Demande de réservation</h3>
+          <div class="champs">
+            <label>Votre nom<input type="text" name="nom" required autocomplete="name"></label>
+            <label>Votre e-mail<input type="email" name="email" required autocomplete="email"></label>
+            <label>Gîte souhaité
+              <select name="gite">
+                <option>Peu importe</option>
+                <option>Le Studio</option>
+                <option>Le Gîte Bleu</option>
+                <option>Le Gîte Rose</option>
+              </select>
+            </label>
+            <label>Personnes<input type="number" name="personnes" min="1" max="2" value="2"></label>
+            <label>Arrivée<input type="date" name="arrivee" required></label>
+            <label>Départ<input type="date" name="depart" required></label>
+            <label class="pleine">Message<textarea name="message" rows="3" placeholder="Une question, un souhait particulier…"></textarea></label>
+          </div>
+          <p class="form-erreur" role="alert" hidden></p>
+          <button type="submit" class="btn btn-clair">Envoyer la demande</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <div class="wrap">
+      <div class="pied-grille">
+        <div>
+          <a class="logo" href="#haut">Chez <em>Ninou</em></a>
+          <p class="pied-texte">Trois gîtes pour deux, un jardin et une piscine à Les Cluses, entre mer et montagne, aux portes de l’Espagne.</p>
+        </div>
+        <div>
+          <h4>Le site</h4>
+          <ul class="pied-liens">
+            <li><a href="#gites">Les gîtes</a></li>
+            <li><a href="#visite">Visite 360°</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#alentours">Alentours</a></li>
+            <li><a href="#infos">Bon à savoir</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="pied-liens">
+            <li><a href="tel:+33674453766">06 74 45 37 66</a></li>
+            <li><a href="mailto:chezninou66@gmail.com">chezninou66@gmail.com</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=14+Avenue+Virginie+66480+Les+Cluses" target="_blank" rel="noopener">14 avenue Virginie<br>66480 Les Cluses</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pied-bas">
+        <span>© <span id="annee"></span> Chez Ninou · Site réalisé avec soin</span>
+        <span>Visite virtuelle 360° : <a href="https://geasy.fr/chez-ninou/" target="_blank" rel="noopener">geasy.fr</a></span>
+      </div>
     </div>
   </footer>
 
-  <!-- Lightbox -->
+  <!-- Visite 360° en plein écran (ouverte depuis les gîtes et la section visite) -->
+  <div class="modal-visite" id="modal-visite" hidden role="dialog" aria-modal="true" aria-label="Visite virtuelle 360°">
+    <div class="modal-barre">
+      <span class="modal-titre">Visite 360° · <em id="modal-scene-nom">Vue d’ensemble</em></span>
+      <div class="scenes-chips modal-scenes" role="group" aria-label="Changer de pièce">
+        <button type="button" class="chip" data-scene="" aria-pressed="false">Vue d’ensemble</button>
+        <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Le Studio</button>
+        <button type="button" class="chip" data-scene="blanc_1" aria-pressed="false">Gîte Bleu</button>
+        <button type="button" class="chip" data-scene="rouge_1" aria-pressed="false">Gîte Rose</button>
+        <button type="button" class="chip" data-scene="piscine" aria-pressed="false">Piscine</button>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="ctrl" id="modal-plein-ecran" title="Plein écran">⛶<span class="ctrl-texte"> Plein écran</span></button>
+        <button type="button" class="ctrl ctrl-fermer" id="modal-fermer">✕<span class="ctrl-texte"> Fermer</span></button>
+      </div>
+    </div>
+    <iframe title="Visite virtuelle 360° de Chez Ninou" allow="fullscreen; gyroscope; accelerometer; xr-spatial-tracking" allowfullscreen></iframe>
+  </div>
+
+  <!-- Lightbox photos -->
   <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog" aria-label="Photo agrandie">
     <button class="lb-fermer" type="button" aria-label="Fermer">×</button>
     <button class="lb-prec" type="button" aria-label="Photo précédente">‹</button>
