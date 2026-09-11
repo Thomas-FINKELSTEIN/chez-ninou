@@ -6,8 +6,13 @@
 // Adresse qui reçoit les demandes de réservation.
 const EMAIL_CONTACT = 'chezninou66@gmail.com';
 
-// Visite 3DVista hébergée par geasy.fr. Une scène = un nom de panorama (paramètre media-name).
-const VISITE_URL = 'https://geasy.fr/chez-ninou/';
+// Visite 3DVista : copie modifiée du lecteur dans visite/ (images servies par geasy.fr).
+// Le lecteur ne fonctionne pas ouvert depuis un fichier local (double-clic) : dans ce cas on
+// rebascule sur la visite d'origine chez geasy.fr. En ligne, c'est toujours la copie visite/.
+// Une scène = un nom de panorama (paramètre media-name).
+const VISITE_URL = location.protocol === 'file:' ? 'https://geasy.fr/chez-ninou/' : 'visite/index.html';
+const lienVisiteOnglet = document.getElementById('lien-visite-onglet');
+if (lienVisiteOnglet) lienVisiteOnglet.href = VISITE_URL;
 const NOMS_SCENES = { '': 'Vue d’ensemble', chambre_rdc_1: 'Le Gîte Rez-de-chaussée', blanc_1: 'Le Gîte Bleu', rouge_1: 'Le Gîte Rose', piscine: 'La piscine' };
 const urlScene = s => VISITE_URL + (s ? '?media-name=' + encodeURIComponent(s) : '');
 const activerChips = (conteneur, scene) => {

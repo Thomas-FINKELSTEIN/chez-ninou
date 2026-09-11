@@ -25,6 +25,9 @@ Cormorant Garamond + Jost, palette crème / terracotta / olive / encre.
   fenêtre de visite, lightbox par groupe, formulaire (`mailto:` prérempli),
   apparition au défilement. Constantes en haut : `EMAIL_CONTACT`,
   `VISITE_URL`, `NOMS_SCENES`.
+- `visite/` — copie modifiée du lecteur de la visite 360° (voir plus bas).
+- `outils/sync-visite.js` — régénère `visite/` depuis geasy.fr avec les
+  modifications (`node outils/sync-visite.js`).
 - `images/` — photos HD fournies par Ninou, réduites à 1800 px (`nom.jpg`) et
   720 px (`nom-min.jpg`, pour les vignettes) :
   - Gîte RDC : rdc-chambre, rdc-chambre-2, rdc-chambre-3, rdc-cuisine,
@@ -42,7 +45,7 @@ Cormorant Garamond + Jost, palette crème / terracotta / olive / encre.
 ## Les trois gîtes
 Le Gîte Rez-de-chaussée (dit « Gîte RDC », classé meublé de tourisme 1★ en
 juin 2026, capacité 2), le Gîte Bleu, le Gîte Rose. 2 personnes max chacun.
-Ne pas appeler le gîte RDC « studio » : c'est le nom que Ninou refuse.
+Ne pas appeler le gîte RDC « studio » : Ninou refuse ce nom.
 
 ## Photos : une série par gîte
 Chaque lien `[data-lightbox]` porte un `data-groupe` (`rdc`, `bleu`, `rose`,
@@ -52,10 +55,26 @@ ajouter une photo à un gîte sans l'afficher dans la fiche, ajouter un lien
 « N photos ».
 
 ## Visite virtuelle 360°
-Visite 3DVista (32 panoramas) hébergée par un ami sur
-https://geasy.fr/chez-ninou/ (pas d'en-tête anti-iframe, intégration OK).
-La rapatrier ici n'est pas raisonnable : 641 Mo et 21 934 fichiers.
+Visite 3DVista (32 panoramas) réalisée par un ami de Ninou et publiée sur
+https://geasy.fr/chez-ninou/. Le site utilise **sa propre copie modifiée** dans
+`visite/` (lecteur, habillage, polices, réglages : 11 Mo) ; les images des
+panoramas (600 Mo) restent chez geasy.fr, dont le serveur autorise le CORS.
 
+Modifications appliquées à la copie (demandées par Ninou) :
+- vue d'ensemble sans le bandeau « Bienvenue Chez Ninou » ni les 3 cercles
+  GÎTE RDC / BLEU / ROSE (la liste `overlays` du panorama `entree` est vidée) ;
+- boutons « Réserver » et « i » du lecteur masqués (`"visible":false`) ;
+  l'épingle de carte (fiche Google Maps de Chez Ninou) est conservée ;
+- plan Google Maps de New York (valeur par défaut) remplacé par Les Cluses ;
+- chemins `media/` en absolu vers geasy.fr ; polices en .woff uniquement.
+Pour régénérer la copie si l'ami republie la visite : `node outils/sync-visite.js`
+(le script s'arrête si les identifiants attendus n'existent plus).
+
+- **Partout sur le site**, c'est cette copie qui est chargée (`VISITE_URL` dans
+  `script.js`) : hero, fenêtre plein écran des gîtes, lien « nouvel onglet ».
+  Exception : ouvert par double-clic (`file://`), le lecteur 3DVista ne
+  fonctionne pas ; le site rebascule alors sur https://geasy.fr/chez-ninou/
+  (version d'origine, avec les cercles). En ligne, c'est toujours la copie.
 - **Hero** : l'iframe se précharge derrière la photo 3 s après l'ouverture
   (sauf économie de données). Le bouton « Visite virtuelle 360° » lance le
   fondu : classe `transition` (zoom + assombrissement + « Chargement… ») puis
@@ -68,11 +87,6 @@ La rapatrier ici n'est pas raisonnable : 641 Mo et 21 934 fichiers.
   `chambre_rdc_1` = Gîte RDC, `blanc_1` = Gîte Bleu, `rouge_1` = Gîte Rose,
   `piscine`, `parking`, `veranda`. Autres panoramas : chambre_rdc_*, blanc_*,
   rouge_*, bas escalier, couloir haut, 05272024_141917 (jardin au sol).
-- **À faire corriger par l'auteur de la visite** (impossible depuis le site) :
-  la vue d'ensemble affiche un bandeau « Bienvenue Chez Ninou » et trois cercles
-  GÎTE RDC / BLEU / ROSE que Ninou ne veut plus ; l'icône « carte » du lecteur
-  affiche un plan Google Maps de New York (valeur par défaut) ; le bouton
-  « Réserver » du lecteur ouvre un lien Google Maps.
 
 ## Contenu réel (déjà en place)
 - Adresse : 14 avenue Virginie, 66480 Les Cluses. Tél. 06 74 45 37 66.
@@ -88,15 +102,16 @@ La rapatrier ici n'est pas raisonnable : 641 Mo et 21 934 fichiers.
 
 ## À compléter
 - Prix par nuit (affiché « Tarif sur demande »), heure d'arrivée, draps et
-  serviettes, animaux, modalités de paiement : chercher `mini-note` dans
-  `index.html`.
+  serviettes, animaux, modalités de paiement (Ninou n'a pas voulu de mention
+  « à préciser » sur le site : ne rien afficher tant que ce n'est pas connu).
 - Les temps de trajet des alentours sont des estimations en voiture.
 
 ## Vérifier le rendu
-Ouvrir `index.html` dans un navigateur suffit (la visite se charge depuis
-geasy.fr). Tester : bouton « Visite virtuelle 360° » puis « Quitter », un
-bouton « Visiter le gîte », la lightbox d'un gîte (flèches : uniquement ses
-photos), le menu burger sur mobile, le formulaire.
+En ligne (GitHub Pages) ou via un petit serveur local ; par double-clic sur
+`index.html`, la visite affichée est celle de geasy.fr (voir plus haut).
+Tester : bouton « Visite virtuelle 360° » puis « Quitter », un bouton
+« Visiter le gîte », la lightbox d'un gîte (flèches : uniquement ses photos),
+le menu burger sur mobile, le formulaire.
 
 ## Publier une modification
 Tout changement poussé sur la branche `main` est mis en ligne automatiquement

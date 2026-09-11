@@ -1,0 +1,256 @@
+#: locale=fr
+
+## Action
+
+### URL
+LinkBehaviour_A31E5669_BB3C_FE87_41E2_A2D451CBA169.source = https://maps.app.goo.gl/33GQai12wuomqsQHA
+LinkBehaviour_9F14D763_BBFC_9E8A_41D7_41F073FD3E04.source = https://maps.app.goo.gl/33GQai12wuomqsQHA
+WebFrame_22F9EEFF_0C1A_2293_4165_411D4444EFEA_mobile.url = <iframe src="https://www.google.com/maps?q=14+Avenue+Virginie,+66480+Les+Cluses,+France&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+WebFrame_22F9EEFF_0C1A_2293_4165_411D4444EFEA.url = <iframe src="https://www.google.com/maps?q=14+Avenue+Virginie,+66480+Les+Cluses,+France&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+
+## Habillage
+
+### Bouton
+Button_15A15DDC_31FA_0014_41A4_CE4305FEC7D1_mobile.label = BACK
+Button_2A2DA53B_310E_001C_41C7_8885E712C50B.label = BACK
+Button_17EA82B7_3106_0014_41C2_C9B0D9E6F22C.label = BACK
+Button_1757CD7D_31FA_0015_4143_A9E37B16A50B_mobile.label = BACK
+Button_168CA310_3106_01EC_41C7_72CE0522951A_mobile.label = BACK
+Button_17EA82B7_3106_0014_41C2_C9B0D9E6F22C_mobile.label = BACK
+Button_175A5214_31FA_0014_4198_930DF49BADD9_mobile.label = BACK
+Button_2A2DA53B_310E_001C_41C7_8885E712C50B_mobile.label = BACK
+Button_1757CD7D_31FA_0015_4143_A9E37B16A50B.label = BACK
+Button_15A15DDC_31FA_0014_41A4_CE4305FEC7D1.label = BACK
+Button_175A5214_31FA_0014_4198_930DF49BADD9.label = BACK
+Button_168CA310_3106_01EC_41C7_72CE0522951A.label = BACK
+Button_2A2C553C_310E_0014_41C4_86393D0ADCC7_mobile.label = Bar
+Button_2A2C553C_310E_0014_41C4_86393D0ADCC7.label = Bar
+Button_2A2D853B_310E_001C_41C4_1C2E2BAFC35D.label = CHAMBRE
+Button_1757AD7D_31FA_0015_41C7_FB79F56FA149.label = CHAMBRE
+Button_2A2D853B_310E_001C_41C4_1C2E2BAFC35D_mobile.label = CHAMBRE
+Button_15A10DDC_31FA_0014_4185_021C898E177D_mobile.label = CHAMBRE
+Button_1757AD7D_31FA_0015_41C7_FB79F56FA149_mobile.label = CHAMBRE
+Button_15A10DDC_31FA_0014_4185_021C898E177D.label = CHAMBRE
+Button_2A2DE53B_310E_001C_41BB_C7AB6950A4DD.label = CUISINE
+Button_15A13DDC_31FA_0014_41C5_41AE80876834_mobile.label = CUISINE
+Button_17565D7D_31FA_0015_4193_78BBCB2DC70F_mobile.label = CUISINE
+Button_2A2DE53B_310E_001C_41BB_C7AB6950A4DD_mobile.label = CUISINE
+Button_17565D7D_31FA_0015_4193_78BBCB2DC70F.label = CUISINE
+Button_15A13DDC_31FA_0014_41C5_41AE80876834.label = CUISINE
+Button_15EF2665_3106_0035_41AE_9BACA1A48D02_mobile.label = Chill Out
+Button_15EF2665_3106_0035_41AE_9BACA1A48D02.label = Chill Out
+Button_1203FDB8_3106_001C_41B6_C9BE8EDD0DA9.label = Garden
+Button_1203FDB8_3106_001C_41B6_C9BE8EDD0DA9_mobile.label = Garden
+Button_ACE6B779_B5B0_E2C2_41D3_D7F141FCE874.label = GÎTE BLEU >
+Button_ACE6B779_B5B0_E2C2_41D3_D7F141FCE874_mobile.label = GÎTE BLEU >
+Button_0AEB5577_2D08_CE7B_41B6_192923248F4E_mobile.label = GÎTE RDC >
+Button_0AEB5577_2D08_CE7B_41B6_192923248F4E.label = GÎTE RDC >
+Button_AC8CE75C_B5B0_A2C1_41E0_46EAE393BC6D.label = GÎTE ROSE >
+Button_AC8CE75C_B5B0_A2C1_41E0_46EAE393BC6D_mobile.label = GÎTE ROSE >
+Button_0B73474A_2D18_CB95_41B5_180037BA80BC.pressedLabel = Inserdt Text
+Button_0B73474A_2D18_CB95_41B5_180037BA80BC_mobile.pressedLabel = Inserdt Text
+Button_062AF830_1140_E215_418D_D2FC11B12C47.label = LOREM IPSUM
+Button_062AF830_1140_E215_418D_D2FC11B12C47_mobile.label = LOREM IPSUM
+Button_159EBDDD_31FA_0014_41C8_935504B30727.label = Lorem Ipsum
+Button_159E8DDD_31FA_0014_41C5_F18F441AF371.label = Lorem Ipsum
+Button_159EEDDC_31FA_0014_41B6_22A86B2D2FEB.label = Lorem Ipsum
+Button_168D9311_3106_01EC_41A8_3BD8769525D6_mobile.label = Lorem Ipsum
+Button_159E9DDC_31FA_0015_41B6_CB1D433C7673.label = Lorem Ipsum
+Button_17566D7D_31FA_0015_41AD_98D7C60C694F.label = Lorem Ipsum
+Button_159EDDDC_31FA_0014_419A_61C18E43FE01.label = Lorem Ipsum
+Button_1759A215_31FA_0014_41C7_F6B1044E5BB3.label = Lorem Ipsum
+Button_17598215_31FA_0014_41AC_1166AB319171.label = Lorem Ipsum
+Button_1759F215_31FA_0014_41BD_BBFA5FB0D882.pressedLabel = Lorem Ipsum
+Button_1759F215_31FA_0014_41BD_BBFA5FB0D882.label = Lorem Ipsum
+Button_1759D215_31FA_0014_41AD_B6C5744A0B97.label = Lorem Ipsum
+Button_17593215_31FA_0014_41C0_42BAFB0080F0.label = Lorem Ipsum
+Button_168D5310_3106_01EC_41B5_96D9387401B8_mobile.label = Lorem Ipsum
+Button_17590215_31FA_0014_41C1_2B2D012DCC76.label = Lorem Ipsum
+Button_17597215_31FA_0014_41C0_9BEE1DE4D7F6.label = Lorem Ipsum
+Button_17596215_31FA_0014_41C6_A42670770708.label = Lorem Ipsum
+Button_1758B215_31FA_0014_41BC_C4EAC2A9544B.label = Lorem Ipsum
+Button_168DA310_3106_01EC_41BE_DF88732C2A28_mobile.label = Lorem Ipsum
+Button_17EAB2B7_3106_0014_41A7_209417AD3E9A.label = Lorem Ipsum
+Button_17EAD2B7_3106_0014_41C0_0B5453B4841D.label = Lorem Ipsum
+Button_17EAE2B7_3106_0014_41C7_DB7FC43AAEE0.pressedLabel = Lorem Ipsum
+Button_17EAE2B7_3106_0014_41C7_DB7FC43AAEE0.label = Lorem Ipsum
+Button_17EB02B7_3106_0014_41AF_05D9AC36B189.label = Lorem Ipsum
+Button_17EB32B7_3106_0014_41C8_467BF6AECBE8.label = Lorem Ipsum
+Button_17EAE2B7_3106_0014_41C7_DB7FC43AAEE0_mobile.label = Lorem Ipsum
+Button_17EB52B7_3106_0014_419C_439E593AEC43.label = Lorem Ipsum
+Button_17EB62B7_3106_0014_41C5_43B38271B353.label = Lorem Ipsum
+Button_17EB72B7_3106_0014_41B9_61857077BF4A.label = Lorem Ipsum
+Button_17EB92B7_3106_0014_41B2_34A3E3F63779.label = Lorem Ipsum
+Button_15A12DDC_31FA_0014_416B_ED845741AE5F.pressedLabel = Lorem Ipsum
+Button_168D6310_3106_01EC_41B8_A0B6BE627547.label = Lorem Ipsum
+Button_168D5310_3106_01EC_41B5_96D9387401B8.label = Lorem Ipsum
+Button_168D3310_3106_01EC_41AC_5D524E4677A5.pressedLabel = Lorem Ipsum
+Button_168D3310_3106_01EC_41AC_5D524E4677A5.label = Lorem Ipsum
+Button_168D2310_3106_01EC_41B8_9D7D1B2B55FA.label = Lorem Ipsum
+Button_168D0310_3106_01EC_41A1_FA8FC42E6FF3.label = Lorem Ipsum
+Button_17562D7D_31FA_0015_41A3_96B282B30DBA_mobile.label = Lorem Ipsum
+Button_168DD310_3106_01EC_4190_7815FA70349E.label = Lorem Ipsum
+Button_168DB310_3106_01EC_41B2_3511AA5E40E1.label = Lorem Ipsum
+Button_168DA310_3106_01EC_41BE_DF88732C2A28.label = Lorem Ipsum
+Button_168D9311_3106_01EC_41A8_3BD8769525D6.label = Lorem Ipsum
+Button_168D6310_3106_01EC_41B8_A0B6BE627547_mobile.label = Lorem Ipsum
+Button_17EB92B7_3106_0014_41B2_34A3E3F63779_mobile.label = Lorem Ipsum
+Button_1756FD7D_31FA_0015_41C7_DA2AAC2AAAEC.label = Lorem Ipsum
+Button_1756DD7D_31FA_0015_41A5_988B67FCF8B7.label = Lorem Ipsum
+Button_17562D7D_31FA_0015_41A3_96B282B30DBA.label = Lorem Ipsum
+Button_17EB72B7_3106_0014_41B9_61857077BF4A_mobile.label = Lorem Ipsum
+Button_17EB62B7_3106_0014_41C5_43B38271B353_mobile.label = Lorem Ipsum
+Button_168DB310_3106_01EC_41B2_3511AA5E40E1_mobile.label = Lorem Ipsum
+Button_17EB52B7_3106_0014_419C_439E593AEC43_mobile.label = Lorem Ipsum
+Button_17560D7D_31FA_0015_41C4_7F0EC7540CC2.label = Lorem Ipsum
+Button_15A12DDC_31FA_0014_416B_ED845741AE5F_mobile.pressedLabel = Lorem Ipsum
+Button_168DD310_3106_01EC_4190_7815FA70349E_mobile.label = Lorem Ipsum
+Button_17593215_31FA_0014_41C0_42BAFB0080F0_mobile.label = Lorem Ipsum
+Button_13D4FC1E_310A_0017_41BA_DDA6D071C1BA_mobile.label = Lorem Ipsum
+Button_17EB32B7_3106_0014_41C8_467BF6AECBE8_mobile.label = Lorem Ipsum
+Button_17567D7D_31FA_0015_41C2_1E0D0AF05C7A.label = Lorem Ipsum
+Button_17EB02B7_3106_0014_41AF_05D9AC36B189_mobile.label = Lorem Ipsum
+Button_159ECDDC_31FA_0014_41B9_2D5AB1021813.label = Lorem Ipsum
+Button_159ECDDC_31FA_0014_41B9_2D5AB1021813_mobile.label = Lorem Ipsum
+Button_17EAE2B7_3106_0014_41C7_DB7FC43AAEE0_mobile.pressedLabel = Lorem Ipsum
+Button_17567D7D_31FA_0015_41C2_1E0D0AF05C7A_mobile.label = Lorem Ipsum
+Button_17566D7D_31FA_0015_41AD_98D7C60C694F_mobile.label = Lorem Ipsum
+Button_159EEDDC_31FA_0014_41B6_22A86B2D2FEB_mobile.label = Lorem Ipsum
+Button_17560D7D_31FA_0015_41C4_7F0EC7540CC2_mobile.label = Lorem Ipsum
+Button_159E9DDC_31FA_0015_41B6_CB1D433C7673_mobile.label = Lorem Ipsum
+Button_1756DD7D_31FA_0015_41A5_988B67FCF8B7_mobile.label = Lorem Ipsum
+Button_1756FD7D_31FA_0015_41C7_DA2AAC2AAAEC_mobile.label = Lorem Ipsum
+Button_17EAD2B7_3106_0014_41C0_0B5453B4841D_mobile.label = Lorem Ipsum
+Button_13D4FC1E_310A_0017_41BA_DDA6D071C1BA.label = Lorem Ipsum
+Button_1758B215_31FA_0014_41BC_C4EAC2A9544B_mobile.label = Lorem Ipsum
+Button_17EAB2B7_3106_0014_41A7_209417AD3E9A_mobile.label = Lorem Ipsum
+Button_1759F215_31FA_0014_41BD_BBFA5FB0D882_mobile.pressedLabel = Lorem Ipsum
+Button_168D0310_3106_01EC_41A1_FA8FC42E6FF3_mobile.label = Lorem Ipsum
+Button_159EDDDC_31FA_0014_419A_61C18E43FE01_mobile.label = Lorem Ipsum
+Button_1759F215_31FA_0014_41BD_BBFA5FB0D882_mobile.label = Lorem Ipsum
+Button_1759D215_31FA_0014_41AD_B6C5744A0B97_mobile.label = Lorem Ipsum
+Button_17596215_31FA_0014_41C6_A42670770708_mobile.label = Lorem Ipsum
+Button_168D2310_3106_01EC_41B8_9D7D1B2B55FA_mobile.label = Lorem Ipsum
+Button_159E8DDD_31FA_0014_41C5_F18F441AF371_mobile.label = Lorem Ipsum
+Button_159EBDDD_31FA_0014_41C8_935504B30727_mobile.label = Lorem Ipsum
+Button_17598215_31FA_0014_41AC_1166AB319171_mobile.label = Lorem Ipsum
+Button_17597215_31FA_0014_41C0_9BEE1DE4D7F6_mobile.label = Lorem Ipsum
+Button_168D3310_3106_01EC_41AC_5D524E4677A5_mobile.label = Lorem Ipsum
+Button_1759A215_31FA_0014_41C7_F6B1044E5BB3_mobile.label = Lorem Ipsum
+Button_168D3310_3106_01EC_41AC_5D524E4677A5_mobile.pressedLabel = Lorem Ipsum
+Button_17590215_31FA_0014_41C1_2B2D012DCC76_mobile.label = Lorem Ipsum
+Button_168DE310_3106_01EC_4192_6A9F468A0ADE.label = Lorem ipsum
+Button_17592215_31FA_0014_41B2_AA3B5CC318B8.label = Lorem ipsum
+Button_17561D7D_31FA_0015_41B5_BD72FAC26B8B.label = Lorem ipsum
+Button_168DE310_3106_01EC_4192_6A9F468A0ADE_mobile.label = Lorem ipsum
+Button_159EFDDC_31FA_0014_41C6_9CF7032F84E0.label = Lorem ipsum
+Button_17EB42B7_3106_0014_41B0_CE70CBDDF438.label = Lorem ipsum
+Button_159EFDDC_31FA_0014_41C6_9CF7032F84E0_mobile.label = Lorem ipsum
+Button_17561D7D_31FA_0015_41B5_BD72FAC26B8B_mobile.label = Lorem ipsum
+Button_17592215_31FA_0014_41B2_AA3B5CC318B8_mobile.label = Lorem ipsum
+Button_17EB42B7_3106_0014_41B0_CE70CBDDF438_mobile.label = Lorem ipsum
+Button_2A2C753B_310E_001C_41C4_B649CCC20E3D_mobile.label = Meeting Area 2
+Button_2A2C753B_310E_001C_41C4_B649CCC20E3D.label = Meeting Area 2
+Button_0B73474A_2D18_CB95_41B5_180037BA80BC_mobile.label = PARKING 
+Button_0B73474A_2D18_CB95_41B5_180037BA80BC.label = PARKING 
+Button_0A054365_2D09_CB9F_4145_8C365B373D19_mobile.label = PISCINE 
+Button_0A054365_2D09_CB9F_4145_8C365B373D19.label = PISCINE 
+Button_1D0C50DE_2D07_C6AD_41C1_CF4547A6CFAB_mobile.label = RESTAURANTS >
+Button_1D0C50DE_2D07_C6AD_41C1_CF4547A6CFAB.label = RESTAURANTS >
+Button_A20E62A8_B5B0_E242_41E0_0FCD4EEA5BD8.label = RÉSERVER
+Button_A20E62A8_B5B0_E242_41E0_0FCD4EEA5BD8_mobile.label = RÉSERVER
+Button_2A2C253B_310E_001C_41B6_D3A7F4F68C3E.label = SALLE DE BAIN
+Button_17564D7D_31FA_0015_41B8_A9191CD56C52_mobile.label = SALLE DE BAIN
+Button_2A2C253B_310E_001C_41B6_D3A7F4F68C3E_mobile.label = SALLE DE BAIN
+Button_2A2C253B_310E_001C_41B6_D3A7F4F68C3E_mobile.pressedLabel = SALLE DE BAIN
+Button_17564D7D_31FA_0015_41B8_A9191CD56C52_mobile.pressedLabel = SALLE DE BAIN
+Button_2A2C253B_310E_001C_41B6_D3A7F4F68C3E.pressedLabel = SALLE DE BAIN
+Button_17564D7D_31FA_0015_41B8_A9191CD56C52.label = SALLE DE BAIN
+Button_17564D7D_31FA_0015_41B8_A9191CD56C52.pressedLabel = SALLE DE BAIN
+Button_15A12DDC_31FA_0014_416B_ED845741AE5F_mobile.label = SALLE DE BAIN 
+Button_15A12DDC_31FA_0014_416B_ED845741AE5F.label = SALLE DE BAIN 
+Button_1D2C4FDF_2D7F_BAAB_4198_FBD1E9E469FF_mobile.label = SPORTS AREA >
+Button_1D2C4FDF_2D7F_BAAB_4198_FBD1E9E469FF.label = SPORTS AREA >
+Button_0399826A_2D79_4594_41BA_934A50D0E6B4_mobile.label = SWIMMING POOL >
+Button_0399826A_2D79_4594_41BA_934A50D0E6B4.label = SWIMMING POOL >
+Button_2A2C053B_310E_001C_41A2_583DE489828C.label = TERRASSE
+Button_2A2C053B_310E_001C_41A2_583DE489828C_mobile.label = TERRASSE
+Button_15F5A318_3106_001C_41C5_9AA2EF2184CF.label = Terrace
+Button_15F5A318_3106_001C_41C5_9AA2EF2184CF_mobile.label = Terrace
+
+### Image
+Image_062A182F_1140_E20B_41B0_9CB8FFD6AA5A.url = skin/Image_062A182F_1140_E20B_41B0_9CB8FFD6AA5A_fr.jpg
+Image_062A182F_1140_E20B_41B0_9CB8FFD6AA5A_mobile.url = skin/Image_062A182F_1140_E20B_41B0_9CB8FFD6AA5A_mobile_fr.jpg
+Image_1E18723C_57F1_802D_41C5_8325536874A5.url = skin/Image_1E18723C_57F1_802D_41C5_8325536874A5_fr.jpg
+Image_1E18723C_57F1_802D_41C5_8325536874A5_mobile.url = skin/Image_1E18723C_57F1_802D_41C5_8325536874A5_mobile_fr.jpg
+Image_1E19C23C_57F1_802D_41D1_9DC72DB5C1E1.url = skin/Image_1E19C23C_57F1_802D_41D1_9DC72DB5C1E1_fr.jpg
+Image_1E19C23C_57F1_802D_41D1_9DC72DB5C1E1_mobile.url = skin/Image_1E19C23C_57F1_802D_41D1_9DC72DB5C1E1_mobile_fr.jpg
+
+### Texte multiligne
+HTMLText_062AD830_1140_E215_41B0_321699661E7F_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:8.059999999999997vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:8.06vmin;font-family:'Bebas Neue Bold';">___</SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:4.579999999999998vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:4.58vmin;font-family:'Oswald';"><B><I>Chez Ninou</I></B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:2.08vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:2.08vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:2.08vmin;font-family:'Oswald';"><B>Pour toute demande de réservation, contactez nous au : </B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:2.08vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:2.8415300546448083vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.84vmin;font-family:'Oswald';"><B>+33 6 74 45 37 66</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.83vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p><p STYLE="margin:0; line-height:2.5vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p></div>
+HTMLText_062AD830_1140_E215_41B0_321699661E7F.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:8.059999999999997vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:8.06vmin;font-family:'Bebas Neue Bold';">___</SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:4.579999999999998vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:4.58vmin;font-family:'Oswald';"><B><I>Chez Ninou</I></B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:2.08vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:2.08vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:2.08vmin;font-family:'Oswald';"><B>Pour toute demande de réservation, contactez nous au : </B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:2.08vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:2.8415300546448083vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.84vmin;font-family:'Oswald';"><B>+33 6 74 45 37 66</B></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.83vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p><p STYLE="margin:0; line-height:2.5vmin;"><BR STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#000000;font-size:0.69vmin;font-family:Arial, Helvetica, sans-serif;"/></p></div>
+HTMLText_1E18123C_57F1_802D_41D2_B0CD0D6533F4.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:8.359999999999998vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:8.36vh;font-family:'Bebas Neue Bold';">___</SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:4.769999999999997vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:4.77vh;font-family:'Oswald';"><B><I>LOREM IPSUM</I></B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:4.769999999999997vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:4.77vh;font-family:'Oswald';"><B><I>DOLOR SIT AMET</I></B></SPAN></SPAN></DIV></div>
+HTMLText_1E18123C_57F1_802D_41D2_B0CD0D6533F4_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:8.359999999999998vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:8.36vh;font-family:'Bebas Neue Bold';">___</SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:4.769999999999997vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:4.77vh;font-family:'Oswald';"><B><I>LOREM IPSUM</I></B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:4.769999999999997vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:4.77vh;font-family:'Oswald';"><B><I>DOLOR SIT AMET</I></B></SPAN></SPAN></DIV></div>
+HTMLText_1E18423C_57F1_802D_41C4_458DB7F892AC_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.5799999999999996vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:2.58vh;font-family:'Oswald';"><B><I>JOHN DOE</I></B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:2.2699999999999987vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.27vh;font-family:'Oswald';"><I>Licensed Real Estate Salesperson</I></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:1.8vh;"><BR STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-size:0.94vh;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:2.1100000000000003vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#999999;font-size:2.11vh;font-family:'Oswald';"><I>Tlf.: +11 111 111 111</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:2.1100000000000003vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#999999;font-size:2.11vh;font-family:'Oswald';"><I>jhondoe@realestate.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:2.1100000000000003vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#999999;font-size:2.11vh;font-family:'Oswald';"><I>www.loremipsum.com</I></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.94vh;"><BR STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-size:0.94vh;font-family:Arial, Helvetica, sans-serif;"/></p><p STYLE="margin:0; line-height:0.94vh;"><BR STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-size:0.94vh;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:1.25vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.25vh;">Mauris aliquet neque quis libero consequat vestibulum. Donec lacinia consequat dolor viverra sagittis. Praesent consequat porttitor risus, eu condimentum nunc. Proin et velit ac sapien luctus efficitur egestas ac augue. Nunc dictum, augue eget eleifend interdum, quam libero imperdiet lectus, vel scelerisque turpis lectus vel ligula. Duis a porta sem. Maecenas sollicitudin nunc id risus fringilla, a pharetra orci iaculis. Aliquam turpis ligula, tincidunt sit amet consequat ac, imperdiet non dolor.</SPAN></SPAN></DIV></div>
+HTMLText_1E18423C_57F1_802D_41C4_458DB7F892AC.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:2.5799999999999996vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#04a3e1;font-size:2.58vh;font-family:'Oswald';"><B><I>JOHN DOE</I></B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:2.2699999999999987vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.27vh;font-family:'Oswald';"><I>Licensed Real Estate Salesperson</I></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:1.8vh;"><BR STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-size:0.94vh;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:2.1100000000000003vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#999999;font-size:2.11vh;font-family:'Oswald';"><I>Tlf.: +11 111 111 111</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:2.1100000000000003vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#999999;font-size:2.11vh;font-family:'Oswald';"><I>jhondoe@realestate.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:2.1100000000000003vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#999999;font-size:2.11vh;font-family:'Oswald';"><I>www.loremipsum.com</I></SPAN></SPAN></DIV><p STYLE="margin:0; line-height:0.94vh;"><BR STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-size:0.94vh;font-family:Arial, Helvetica, sans-serif;"/></p><p STYLE="margin:0; line-height:0.94vh;"><BR STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-size:0.94vh;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-align:left;font-size:1.25vh;"><SPAN STYLE="display:inline-block; letter-spacing:0vh; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:1.25vh;">Mauris aliquet neque quis libero consequat vestibulum. Donec lacinia consequat dolor viverra sagittis. Praesent consequat porttitor risus, eu condimentum nunc. Proin et velit ac sapien luctus efficitur egestas ac augue. Nunc dictum, augue eget eleifend interdum, quam libero imperdiet lectus, vel scelerisque turpis lectus vel ligula. Duis a porta sem. Maecenas sollicitudin nunc id risus fringilla, a pharetra orci iaculis. Aliquam turpis ligula, tincidunt sit amet consequat ac, imperdiet non dolor.</SPAN></SPAN></DIV></div>
+HTMLText_29DD1615_3597_79DF_41C4_7593739E5260.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>Company Name</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>www.loremipsum.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>info@loremipsum.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>Tlf.: +11 111 111 111</I></SPAN></SPAN></DIV></div>
+HTMLText_29DD1615_3597_79DF_41C4_7593739E5260_mobile.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:7px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:7px;font-family:'Oswald Regular';"><I>Company Name</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:7px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:7px;font-family:'Oswald Regular';"><I>www.loremipsum.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:7px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:7px;font-family:'Oswald Regular';"><I>info@loremipsum.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:7px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:7px;font-family:'Oswald Regular';"><I>Tlf.: +11 111 111 111</I></SPAN></SPAN></DIV></div>
+
+### Étiquette
+Label_22BB22F4_3075_D173_41BB_3ACDC6CCCC83_mobile.text = Chez Ninou
+Label_22BB22F4_3075_D173_41BB_3ACDC6CCCC83.text = Chez Ninou
+Label_ADB7B430_B5B1_6641_41E1_BC3DB9D9776C.text = Chez Ninou
+Label_ADB7B430_B5B1_6641_41E1_BC3DB9D9776C_mobile.text = Chez Ninou
+Label_22BB32F4_3075_D173_4191_C8B45B85DEB8.text = DOLOR SIT AMET, CONSECTETUR
+Label_22BB32F4_3075_D173_4191_C8B45B85DEB8_mobile.text = DOLOR SIT AMET, CONSECTETUR
+
+## Hotspot
+
+### Texte
+HotspotPanoramaOverlayTextImage_A1AD50BB_B593_DE46_41E0_BF2DD8324774.text = Bienvenue Chez Ninou
+
+## Média
+
+### Image
+imlevel_B69D785B_B8DA_3E6F_41DF_71274D351A61.url = media/panorama_A727EF35_B597_A242_41E2_3C8B69D81664_HS_gye7700r_fr.png
+
+### Titre
+panorama_AFB95FC8_B8DB_6D86_41E3_E7C985DA1573.label = 05272024_141917
+panorama_A41FD342_B591_62C1_41D7_F93362C5BAD3.label = bas escalier
+panorama_A76E49E3_B59F_A1C6_41E5_A5A16623CFE4.label = blanc_1
+panorama_A50AE234_B59F_A241_41E6_62E96C881862.label = blanc_2
+panorama_A503D9E8_B59F_A1C1_41B7_1B3E94A0A0AA.label = blanc_3
+panorama_A5F111B7_B59F_5E4F_41C4_01C24B95D810.label = blanc_entree
+panorama_A5F079AB_B59F_6E46_41E5_166E3E43E6C0.label = blanc_sdb
+panorama_B94EA261_B571_A2C3_41BA_345DD937A67E.label = chambre_rdc_1
+panorama_B97B0467_B571_A6CF_41D0_8839E0268EF5.label = chambre_rdc_2
+panorama_B979B74C_B571_62C2_41E6_27D41D419540.label = chambre_rdc_4
+panorama_B979C911_B570_AE42_41D6_0AB74C368EDB.label = chambre_rdc_5
+panorama_B9797C15_B570_A642_41E5_AECE05695E17.label = chambre_rdc_access
+panorama_B9791588_B570_E641_41DA_2220B8E3FC73.label = chambre_rdc_cuisine
+panorama_B979071B_B570_E246_41DB_CD68324B3C1F.label = chambre_rdc_cuisine2
+panorama_B9793731_B570_A243_41CB_14ADBDA0EFC8.label = chambre_rdc_exte
+panorama_9836BD3E_BBE5_92FA_41B9_4A05C3DE8EA8.label = chambre_rdc_sdb
+panorama_B97B0060_B573_5EC1_41A7_9507A8238EF2.label = chambre_rdc_sdb_2
+panorama_B97B2087_B573_7E4E_41E2_E2DCB27F92AA.label = chambre_rdc_sdb_3
+panorama_B97B8859_B573_6EC3_4194_35ADFFE32615.label = chambre_rdc_terrasse
+panorama_BA4254FE_B590_A7C1_41E6_54B4B2B6DF65.label = couloir haut
+panorama_A727EF35_B597_A242_41E2_3C8B69D81664.label = entree
+panorama_BA4536E7_B590_A3CE_41E0_879D904E21A4.label = parking
+panorama_9858ED38_BBFB_B286_41E1_2144C66E9C3E.label = piscine
+panorama_A5F231F9_B593_A1C3_41E5_93D718EF6C12.label = rouge-2
+panorama_A4F54D39_B590_A642_41C8_CB47D8EB45FB.label = rouge_1
+panorama_A5F1E83E_B590_AE41_41E4_CFCA9D656DF3.label = rouge_3
+panorama_A5F23B54_B593_62C2_41D4_CB24D02842AC.label = rouge_4
+panorama_A5F2BC92_B593_6641_41E2_7EAD311FFC04.label = rouge_couloir
+panorama_A5FDDE17_B593_A24E_41B6_3D7E0DC2E020.label = rouge_dev
+panorama_A5F21F47_B593_A2CE_41C8_38E286A09FB5.label = rouge_sdb
+panorama_A5F24068_B593_FEC1_41D8_8FA1DA4BC8B9.label = rouge_sdb_2
+panorama_BA427A0F_B590_E25E_41E5_6D34A8274736.label = veranda
+
+## Visite
+
+### Description
+
+### Titre
+tour.name = Chez Ninou 
