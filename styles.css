@@ -94,9 +94,12 @@ p { margin: 0 0 16px; }
   position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: var(--entete);
   display: flex; align-items: center; padding: 0 clamp(20px, 4vw, 48px);
   color: var(--creme);
-  background: linear-gradient(180deg, rgba(28, 25, 22, .6), rgba(28, 25, 22, 0));
+  background: linear-gradient(180deg, rgba(28, 25, 22, .7), rgba(28, 25, 22, .3) 65%, rgba(28, 25, 22, 0));
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .6);
   transition: transform .45s cubic-bezier(.4, 0, .2, 1), background .35s ease, color .35s ease, box-shadow .35s ease;
 }
+.entete.solide, .entete.solide .btn-mini { text-shadow: none; }
+.entete .btn-mini { text-shadow: none; }
 .entete-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .entete.solide { background: rgba(245, 239, 228, .92); color: var(--texte); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--ligne); }
 .entete.menu-ouvert { background: transparent; color: var(--creme); box-shadow: none; backdrop-filter: none; }
@@ -153,27 +156,35 @@ body.immersif .entete { transform: translateY(-110%); }
 .hero-photo-cadre { position: absolute; inset: 0; z-index: 1; overflow: hidden; transition: opacity 1.6s ease; }
 .hero-photo {
   width: 100%; height: 100%; object-fit: cover; transform-origin: 52% 42%;
+  filter: saturate(.9) brightness(.94);   /* arrivée plus douce, le texte prend le dessus */
   animation: respire 34s ease-in-out infinite alternate;
-  transition: transform 2.8s cubic-bezier(.2, .7, .2, 1);
+  transition: transform 2.8s cubic-bezier(.2, .7, .2, 1), filter 1.2s ease;
 }
+.hero.immersif .hero-photo { filter: none; }
 @keyframes respire { from { scale: 1; } to { scale: 1.08; } }
 .hero.transition .hero-photo, .hero.immersif .hero-photo { transform: scale(1.14); }
 .hero.immersif .hero-photo-cadre { opacity: 0; pointer-events: none; }
 
 .hero-voile {
   position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: flex-end;
-  background: linear-gradient(180deg, rgba(28, 25, 22, .42) 0%, rgba(28, 25, 22, .1) 32%, rgba(28, 25, 22, .3) 58%, rgba(28, 25, 22, .9) 100%);
+  /* Voile plus profond en haut (menu) et en bas (texte), plus léger au milieu pour laisser respirer la photo. */
+  background: linear-gradient(180deg, rgba(28, 25, 22, .72) 0%, rgba(28, 25, 22, .34) 22%, rgba(28, 25, 22, .24) 44%, rgba(28, 25, 22, .58) 68%, rgba(28, 25, 22, .94) 100%);
   transition: opacity .9s ease;
+}
+/* Halo sombre et diffus derrière le bloc de texte, pour une lecture nette sans cadre visible. */
+.hero-texte::before {
+  content: ''; position: absolute; inset: -14% -22% -10%; z-index: -1; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 58%, rgba(28, 25, 22, .62) 0%, rgba(28, 25, 22, .42) 36%, rgba(28, 25, 22, 0) 68%);
 }
 .hero-voile::after { content: ''; position: absolute; inset: 0; background: rgba(28, 25, 22, .45); opacity: 0; transition: opacity 1s ease; pointer-events: none; }
 .hero.transition .hero-voile::after { opacity: 1; }
 .hero.immersif .hero-voile { opacity: 0; pointer-events: none; }
 
 .hero-texte { position: relative; z-index: 1; width: min(940px, 100% - 2 * clamp(20px, 5vw, 72px)); margin: 0 auto; text-align: center; }
-.hero .kicker { text-transform: uppercase; letter-spacing: .26em; font-size: 12px; font-weight: 500; color: var(--or); margin: 0 0 18px; }
-.hero h1 { font-size: clamp(42px, 7.2vw, 108px); line-height: .98; text-shadow: 0 4px 40px rgba(0, 0, 0, .45); }
+.hero .kicker { text-transform: uppercase; letter-spacing: .26em; font-size: 13px; font-weight: 500; color: #e3c68f; margin: 0 0 18px; text-shadow: 0 1px 2px rgba(0, 0, 0, .75), 0 0 18px rgba(0, 0, 0, .5); }
+.hero h1 { font-size: clamp(42px, 7.2vw, 108px); line-height: .98; text-shadow: 0 2px 6px rgba(0, 0, 0, .45), 0 10px 44px rgba(0, 0, 0, .55); }
 .hero h1 em { color: var(--creme); }
-.hero-sous { font-size: clamp(16px, 1.6vw, 20px); max-width: 560px; margin: 22px auto 0; color: rgba(245, 239, 228, .88); }
+.hero-sous { font-size: clamp(17px, 1.7vw, 21px); font-weight: 400; max-width: 600px; margin: 22px auto 0; color: #f7f2e8; text-shadow: 0 1px 3px rgba(0, 0, 0, .75), 0 0 20px rgba(0, 0, 0, .5); }
 .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 30px; }
 
 /* Le grand bouton de la visite */
@@ -199,8 +210,9 @@ body.immersif .entete { transform: translateY(-110%); }
 }
 .hero.transition .btn-visite { pointer-events: none; opacity: .7; animation: none; }
 .hero-lien {
-  color: rgba(245, 239, 228, .85); text-decoration: none; font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
-  border-bottom: 1px solid rgba(245, 239, 228, .35); padding-bottom: 3px; transition: color .2s ease, border-color .2s ease;
+  color: rgba(245, 239, 228, .92); text-decoration: none; font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+  border-bottom: 1px solid rgba(245, 239, 228, .45); padding-bottom: 3px; transition: color .2s ease, border-color .2s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .7);
 }
 .hero-lien:hover { color: #fff; border-color: #fff; }
 
