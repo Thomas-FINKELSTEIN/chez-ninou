@@ -53,6 +53,7 @@
       </button>
       <nav class="nav" id="menu">
         <a href="#gites">Les gîtes</a>
+        <a href="#visite">Visite 360°</a>
         <a href="#galerie">Galerie</a>
         <a href="#alentours">Les alentours</a>
         <a href="#infos">Bon à savoir</a>
@@ -118,42 +119,73 @@
               <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li>
             </ul>
             <p class="carte-prix"><strong>Tarif sur demande</strong></p>
-            <a href="#contact" class="btn btn-mini" data-gite="Le Studio">Demander les dates</a>
+            <div class="carte-actions">
+              <a href="#contact" class="btn btn-mini" data-gite="Le Studio">Demander les dates</a>
+              <a href="#visite" class="lien-visite" data-visite="chambre_rdc_1">Visite 360°</a>
+            </div>
           </div>
         </article>
 
         <article class="carte-gite reveal">
-          <a class="carte-photo" href="images/chambre.jpg" data-lightbox data-caption="Le Gîte Bleu">
-            <img src="images/chambre.jpg" alt="Le Gîte Bleu : chambre lumineuse avec porte-fenêtre sur le jardin" loading="lazy">
+          <a class="carte-photo" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu">
+            <img src="images/gite-bleu.jpg" alt="Le Gîte Bleu : lit double, coin cuisine et coin repas aux tons bleus" loading="lazy">
           </a>
           <div class="carte-corps">
             <h3>Le Gîte Bleu</h3>
             <p class="carte-meta">2 personnes · coin cuisine · salle d'eau</p>
-            <p>Ambiance douce et lumineuse, lit double avec vue sur le jardin, cuisine équipée et climatisation.</p>
+            <p>Ambiance marine et lumineuse, lit double, coin repas, cuisine équipée et climatisation.</p>
             <ul class="equip">
               <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Accès jardin</li>
             </ul>
             <p class="carte-prix"><strong>Tarif sur demande</strong></p>
-            <a href="#contact" class="btn btn-mini" data-gite="Le Gîte Bleu">Demander les dates</a>
+            <div class="carte-actions">
+              <a href="#contact" class="btn btn-mini" data-gite="Le Gîte Bleu">Demander les dates</a>
+              <a href="#visite" class="lien-visite" data-visite="blanc_1">Visite 360°</a>
+            </div>
           </div>
         </article>
 
         <article class="carte-gite reveal">
-          <a class="carte-photo" href="images/terrasse.jpg" data-lightbox data-caption="Le Gîte Rose">
-            <img src="images/terrasse.jpg" alt="Le Gîte Rose : terrasse couverte avec table et chaises" loading="lazy">
+          <a class="carte-photo" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose">
+            <img src="images/gite-rose.jpg" alt="Le Gîte Rose : lit double, coin repas et rideaux roses" loading="lazy">
           </a>
           <div class="carte-corps">
             <h3>Le Gîte Rose</h3>
             <p class="carte-meta">2 personnes · coin cuisine · salle d'eau</p>
-            <p>Un cocon confortable ouvert sur la terrasse couverte et le jardin. Cuisine équipée et climatisation.</p>
+            <p>Un cocon chaleureux aux tons rosés, lit double, coin repas, cuisine équipée et climatisation. Accès à la terrasse couverte.</p>
             <ul class="equip">
               <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Terrasse</li>
             </ul>
             <p class="carte-prix"><strong>Tarif sur demande</strong></p>
-            <a href="#contact" class="btn btn-mini" data-gite="Le Gîte Rose">Demander les dates</a>
+            <div class="carte-actions">
+              <a href="#contact" class="btn btn-mini" data-gite="Le Gîte Rose">Demander les dates</a>
+              <a href="#visite" class="lien-visite" data-visite="rouge_1">Visite 360°</a>
+            </div>
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- VISITE VIRTUELLE -->
+  <section class="section section-dark" id="visite">
+    <div class="wrap">
+      <p class="etiq center">Visite virtuelle 360°</p>
+      <h2 class="center">Visitez comme si vous y étiez</h2>
+      <p class="intro center">Déplacez-vous librement dans les trois gîtes, le jardin et la piscine. Choisissez un point de départ, puis lancez la visite.</p>
+      <div class="visite-choix">
+        <button type="button" class="chip actif" data-scene="" aria-pressed="true">Vue d'ensemble</button>
+        <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Le Studio</button>
+        <button type="button" class="chip" data-scene="blanc_1" aria-pressed="false">Le Gîte Bleu</button>
+        <button type="button" class="chip" data-scene="rouge_1" aria-pressed="false">Le Gîte Rose</button>
+        <button type="button" class="chip" data-scene="piscine" aria-pressed="false">La piscine</button>
+      </div>
+      <div class="visite-cadre">
+        <img class="visite-poster" src="images/visite-poster.jpg" alt="Vue aérienne de la maison, du jardin et de la piscine" loading="lazy">
+        <button type="button" class="visite-lancer"><span class="play">▶</span> Lancer la visite 360°</button>
+        <iframe title="Visite virtuelle 360° de Chez Ninou" allow="fullscreen; gyroscope; accelerometer; xr-spatial-tracking" allowfullscreen hidden></iframe>
+      </div>
+      <p class="center visite-note"><a href="https://geasy.fr/chez-ninou/" target="_blank" rel="noopener">Ouvrir la visite en plein écran</a> · Glissez pour regarder autour de vous, touchez les flèches pour avancer.</p>
     </div>
   </section>
 
@@ -162,13 +194,19 @@
     <div class="wrap">
       <p class="etiq center">En images</p>
       <h2 class="center">Galerie</h2>
-      <p class="intro center">Un aperçu des intérieurs, du jardin et de la terrasse. Cliquez pour agrandir.</p>
+      <p class="intro center">Un aperçu des intérieurs, du jardin et de la piscine. Cliquez pour agrandir.</p>
       <div class="galerie">
         <a class="g-item reveal" href="images/studio.jpg" data-lightbox data-caption="Le Studio et ses arches en pierre">
           <img src="images/studio.jpg" alt="Le Studio et ses arches en pierre" loading="lazy">
         </a>
-        <a class="g-item reveal" href="images/chambre.jpg" data-lightbox data-caption="Chambre ouverte sur le jardin">
-          <img src="images/chambre.jpg" alt="Chambre ouverte sur le jardin" loading="lazy">
+        <a class="g-item reveal" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu">
+          <img src="images/gite-bleu.jpg" alt="Le Gîte Bleu" loading="lazy">
+        </a>
+        <a class="g-item reveal" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose">
+          <img src="images/gite-rose.jpg" alt="Le Gîte Rose" loading="lazy">
+        </a>
+        <a class="g-item reveal" href="images/chambre.jpg" data-lightbox data-caption="Le Studio, côté jardin">
+          <img src="images/chambre.jpg" alt="Le Studio, côté jardin" loading="lazy">
         </a>
         <a class="g-item reveal" href="images/cuisine.jpg" data-lightbox data-caption="Coin cuisine équipé">
           <img src="images/cuisine.jpg" alt="Coin cuisine équipé" loading="lazy">
@@ -181,6 +219,9 @@
         </a>
         <a class="g-item reveal" href="images/hero.jpg" data-lightbox data-caption="Le jardin arboré">
           <img src="images/hero.jpg" alt="Le jardin arboré" loading="lazy">
+        </a>
+        <a class="g-item reveal" href="images/visite-poster.jpg" data-lightbox data-caption="La maison, le jardin et la piscine vus du ciel">
+          <img src="images/visite-poster.jpg" alt="La maison, le jardin et la piscine vus du ciel" loading="lazy">
         </a>
       </div>
     </div>
@@ -269,6 +310,7 @@
       <span>Chez Ninou · 14 avenue Virginie, 66480 Les Cluses · <a href="tel:+33674453766">06 74 45 37 66</a></span>
       <nav class="footer-nav">
         <a href="#gites">Les gîtes</a>
+        <a href="#visite">Visite 360°</a>
         <a href="#galerie">Galerie</a>
         <a href="#contact">Contact</a>
       </nav>

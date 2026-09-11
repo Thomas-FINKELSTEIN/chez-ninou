@@ -132,6 +132,32 @@ if (form) {
   });
 }
 
+/* ---------- 3b. Visite virtuelle 360° (3DVista hébergée chez geasy.fr) ---------- */
+const VISITE_URL = 'https://geasy.fr/chez-ninou/';
+const visite = document.getElementById('visite');
+if (visite) {
+  const iframe = visite.querySelector('iframe');
+  const lancer = visite.querySelector('.visite-lancer');
+  const chips = visite.querySelectorAll('.chip');
+  let scene = '';
+  const urlScene = s => VISITE_URL + (s ? '?media-name=' + encodeURIComponent(s) : '');
+  const charger = () => {
+    const url = urlScene(scene);
+    if (iframe.src !== url) iframe.src = url;
+    iframe.hidden = false;
+    visite.classList.add('visite-active');
+  };
+  const choisir = s => {
+    scene = s;
+    chips.forEach(c => { const actif = c.dataset.scene === s; c.classList.toggle('actif', actif); c.setAttribute('aria-pressed', String(actif)); });
+    if (!iframe.hidden) charger();
+  };
+  lancer.addEventListener('click', charger);
+  chips.forEach(c => c.addEventListener('click', () => choisir(c.dataset.scene)));
+  // Liens « Visite 360° » des cartes gîtes : on choisit la scène et on lance.
+  document.querySelectorAll('[data-visite]').forEach(a => a.addEventListener('click', () => { choisir(a.dataset.visite); charger(); }));
+}
+
 /* ---------- 4. Apparition au défilement ---------- */
 const reveals = document.querySelectorAll('.reveal');
 const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
