@@ -2,8 +2,8 @@
    1. Menu mobile   2. Lightbox galerie   3. Formulaire de réservation (mailto)
    4. Apparition au défilement   5. Année du footer */
 
-// Adresse qui reçoit les demandes de réservation : à remplacer par la vraie.
-const EMAIL_CONTACT = 'contact@chezninou.fr';
+// Adresse qui reçoit les demandes de réservation.
+const EMAIL_CONTACT = 'chezninou66@gmail.com';
 
 /* ---------- 1. Menu mobile ---------- */
 const burger = document.querySelector('.burger');

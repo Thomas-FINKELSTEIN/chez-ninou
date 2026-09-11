@@ -17,13 +17,15 @@ approche que le projet La Géode.
 - `.nojekyll` — sert le site tel quel sur GitHub Pages.
 - `CNAME` — présent seulement si un nom de domaine est branché.
 
-## À compléter (contenu réel)
+## Contenu réel (déjà en place)
+- Adresse : 14 avenue Virginie, 66480 Les Cluses. Tél. 06 74 45 37 66.
+  E-mail : chezninou66@gmail.com (dans `index.html` **et** `EMAIL_CONTACT` dans `script.js`).
+- Trois gîtes de 2 personnes max : Le Studio, Le Gîte Bleu, Le Gîte Rose.
+
+## À compléter
 Chercher les `[...]` et `mini-note` dans `index.html` :
-- Commune exacte, téléphone (`tel:` + texte), e-mail (`mailto:` dans
-  `index.html` **et** `EMAIL_CONTACT` dans `script.js`).
-- Capacité, prix par nuit des trois gîtes (Le Studio, Le Gîte Bleu, Le Gîte Rose).
-- Section « Bon à savoir » : horaires d'arrivée/départ, linge, animaux, accès,
-  paiement.
+- Prix par nuit (affiché « Tarif sur demande » en attendant).
+- Section « Bon à savoir » : horaires d'arrivée/départ, linge, animaux, paiement.
 - Vérifier les étiquettes d'équipement des cartes gîtes (`.equip`).
 
 ## Vérifier le rendu
