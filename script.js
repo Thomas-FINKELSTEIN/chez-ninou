@@ -1,6 +1,6 @@
 /* Chez Ninou — comportements du site (aucune dépendance).
-   1. En-tête   2. Menu mobile   3. Hero : visite 360° en plein écran + mode immersif
-   4. Visite 360° en fenêtre plein écran (gîtes, scènes)   5. Lightbox photos
+   1. En-tête   2. Menu mobile   3. Hero : photo de la maison → visite 360° (fondu) + mode immersif
+   4. Visite 360° en fenêtre plein écran (gîtes, scènes)   5. Lightbox photos (une série par gîte)
    6. Formulaire de réservation (mailto)   7. Apparition au défilement   8. Année */
 
 // Adresse qui reçoit les demandes de réservation.
@@ -8,7 +8,7 @@ const EMAIL_CONTACT = 'chezninou66@gmail.com';
 
 // Visite 3DVista hébergée par geasy.fr. Une scène = un nom de panorama (paramètre media-name).
 const VISITE_URL = 'https://geasy.fr/chez-ninou/';
-const NOMS_SCENES = { '': 'Vue d’ensemble', chambre_rdc_1: 'Le Studio', blanc_1: 'Le Gîte Bleu', rouge_1: 'Le Gîte Rose', piscine: 'La piscine' };
+const NOMS_SCENES = { '': 'Vue d’ensemble', chambre_rdc_1: 'Le Gîte Rez-de-chaussée', blanc_1: 'Le Gîte Bleu', rouge_1: 'Le Gîte Rose', piscine: 'La piscine' };
 const urlScene = s => VISITE_URL + (s ? '?media-name=' + encodeURIComponent(s) : '');
 const activerChips = (conteneur, scene) => {
   conteneur.querySelectorAll('.chip').forEach(c => {
@@ -18,7 +18,7 @@ const activerChips = (conteneur, scene) => {
   });
 };
 
-/* ---------- 1. En-tête : transparent sur la visite, opaque ensuite ---------- */
+/* ---------- 1. En-tête : transparent sur la photo, opaque ensuite ---------- */
 const entete = document.getElementById('entete');
 const majEntete = () => entete.classList.toggle('solide', window.scrollY > 40);
 majEntete();
@@ -50,33 +50,42 @@ const fermerMenu = () => {
 burger.addEventListener('click', () => (menuOuvert ? fermerMenu() : ouvrirMenu()));
 menuMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', fermerMenu));
 
-/* ---------- 3. Hero : la visite virtuelle en plein écran ---------- */
+/* ---------- 3. Hero : la photo d'abord, la visite au clic ---------- */
 const hero = document.getElementById('haut');
 const heroIframe = hero.querySelector('.hero-iframe');
 const heroControles = hero.querySelector('.hero-controles');
-const badgeTexte = hero.querySelector('.badge-texte');
+const heroChargement = hero.querySelector('.hero-chargement');
 const boutonExplorer = document.getElementById('explorer');
 const boutonQuitter = document.getElementById('quitter');
 let sceneHero = '';
+let heroCharge = false;   // l'iframe a reçu son adresse
+let heroPret = false;     // le lecteur a fini de charger
+let attenteImmersif = false;
 let immersif = false;
 
-const chargerHero = () => { heroIframe.src = urlScene(sceneHero); };
+const chargerHero = () => {
+  if (heroCharge) return;
+  heroCharge = true;
+  heroIframe.src = urlScene(sceneHero);
+};
 heroIframe.addEventListener('load', () => {
   if (!heroIframe.getAttribute('src')) return;
   // Le lecteur affiche encore son propre écran de chargement pendant ~1 s.
   setTimeout(() => {
+    heroPret = true;
     hero.classList.add('pret');
-    badgeTexte.textContent = 'Visite virtuelle en direct · 32 panoramas';
+    if (attenteImmersif) lancerImmersif();
   }, 1200);
 });
 
-// Économie de données activée : on attend le clic. Sinon la visite démarre tout de suite.
+// La visite se précharge discrètement derrière la photo, sauf si l'économie de données est activée.
 const economieDonnees = navigator.connection && navigator.connection.saveData;
-if (economieDonnees) badgeTexte.textContent = 'Visite virtuelle · cliquez sur Explorer pour la lancer';
-else chargerHero();
+if (!economieDonnees) setTimeout(chargerHero, 3000);
 
-const entrerImmersif = () => {
-  if (!heroIframe.getAttribute('src')) chargerHero();
+const lancerImmersif = () => {
+  attenteImmersif = false;
+  heroChargement.hidden = true;
+  hero.classList.remove('transition');
   immersif = true;
   hero.classList.add('immersif');
   document.body.classList.add('immersif');
@@ -84,7 +93,20 @@ const entrerImmersif = () => {
   fermerMenu();
   boutonQuitter.focus({ preventScroll: true });
 };
+const entrerImmersif = () => {
+  if (immersif) return;
+  hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  chargerHero();
+  if (heroPret) { lancerImmersif(); return; }
+  // Fondu d'attente : la photo zoome et s'assombrit le temps que le lecteur arrive.
+  attenteImmersif = true;
+  hero.classList.add('transition');
+  heroChargement.hidden = false;
+};
 const sortirImmersif = () => {
+  attenteImmersif = false;
+  heroChargement.hidden = true;
+  hero.classList.remove('transition');
   if (!immersif) return;
   immersif = false;
   hero.classList.remove('immersif');
@@ -92,10 +114,7 @@ const sortirImmersif = () => {
   heroControles.hidden = true;
   if (document.fullscreenElement === hero) document.exitFullscreen().catch(() => {});
 };
-boutonExplorer.addEventListener('click', () => {
-  hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  entrerImmersif();
-});
+boutonExplorer.addEventListener('click', entrerImmersif);
 boutonQuitter.addEventListener('click', () => { sortirImmersif(); boutonExplorer.focus({ preventScroll: true }); });
 document.getElementById('hero-plein-ecran').addEventListener('click', () => {
   if (hero.requestFullscreen) hero.requestFullscreen().catch(() => {});
@@ -103,7 +122,7 @@ document.getElementById('hero-plein-ecran').addEventListener('click', () => {
 heroControles.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
   sceneHero = chip.dataset.scene;
   activerChips(heroControles, sceneHero);
-  chargerHero();
+  heroIframe.src = urlScene(sceneHero);
 }));
 // Un clic sur un lien du site quitte le mode immersif.
 document.querySelectorAll('.entete a, .menu-mobile a').forEach(a => a.addEventListener('click', sortirImmersif));
@@ -153,36 +172,42 @@ document.getElementById('modal-plein-ecran').addEventListener('click', () => {
   if (modal.requestFullscreen) modal.requestFullscreen().catch(() => {});
 });
 
-/* ---------- 5. Lightbox photos ---------- */
+/* ---------- 5. Lightbox : une série de photos par groupe (rdc, bleu, rose, maison) ---------- */
 const lightbox = document.getElementById('lightbox');
-const liens = Array.from(document.querySelectorAll('[data-lightbox]'));
-let lightboxOuvert = false;
+const tousLesLiens = Array.from(document.querySelectorAll('[data-lightbox]'));
+let serie = [];          // liens du groupe en cours
 let indexPhoto = 0;
+let lightboxOuvert = false;
 const fermerLightbox = () => {
   if (!lightboxOuvert) return;
   lightboxOuvert = false;
   lightbox.hidden = true;
   document.body.classList.remove('no-scroll');
-  liens[indexPhoto].focus({ preventScroll: true });
+  const lien = serie[indexPhoto];
+  if (lien && !lien.hidden) lien.focus({ preventScroll: true });
 };
-if (lightbox && liens.length) {
+if (lightbox && tousLesLiens.length) {
   const img = lightbox.querySelector('img');
-  const legende = lightbox.querySelector('figcaption');
+  const legende = lightbox.querySelector('.lb-legende');
+  const compteur = lightbox.querySelector('.lb-compteur');
   const afficher = i => {
-    indexPhoto = (i + liens.length) % liens.length;
-    const lien = liens[indexPhoto];
+    indexPhoto = (i + serie.length) % serie.length;
+    const lien = serie[indexPhoto];
     img.src = lien.getAttribute('href');
     img.alt = lien.dataset.caption || '';
     legende.textContent = lien.dataset.caption || '';
+    compteur.textContent = serie.length > 1 ? `${indexPhoto + 1} / ${serie.length}` : '';
   };
-  const ouvrir = i => {
-    afficher(i);
+  const ouvrirDepuis = lien => {
+    const groupe = lien.dataset.groupe || '';
+    serie = tousLesLiens.filter(l => (l.dataset.groupe || '') === groupe);
+    afficher(serie.indexOf(lien));
     lightboxOuvert = true;
     lightbox.hidden = false;
     document.body.classList.add('no-scroll');
     lightbox.querySelector('.lb-fermer').focus();
   };
-  liens.forEach((lien, i) => lien.addEventListener('click', e => { e.preventDefault(); ouvrir(i); }));
+  tousLesLiens.forEach(lien => lien.addEventListener('click', e => { e.preventDefault(); ouvrirDepuis(lien); }));
   lightbox.querySelector('.lb-fermer').addEventListener('click', fermerLightbox);
   lightbox.querySelector('.lb-prec').addEventListener('click', () => afficher(indexPhoto - 1));
   lightbox.querySelector('.lb-suiv').addEventListener('click', () => afficher(indexPhoto + 1));
@@ -208,7 +233,7 @@ document.addEventListener('keydown', e => {
   if (lightboxOuvert) fermerLightbox();
   else if (modalOuvert) fermerModal();
   else if (menuOuvert) fermerMenu();
-  else if (immersif) sortirImmersif();
+  else if (immersif || attenteImmersif) sortirImmersif();
 });
 
 /* ---------- 6. Formulaire de réservation ---------- */

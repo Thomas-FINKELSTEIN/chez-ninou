@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Chez Ninou · Gîtes 360° à Les Cluses">
   <meta property="og:description" content="Trois gîtes pour deux, un jardin arboré et une piscine, aux portes de l’Espagne. Visite virtuelle 360° en direct.">
-  <meta property="og:image" content="images/visite-poster.jpg">
+  <meta property="og:image" content="images/hero-maison.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -20,6 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://geasy.fr">
+  <link rel="preload" as="image" href="images/hero-maison.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
@@ -29,15 +30,17 @@
     "@type": "LodgingBusiness",
     "name": "Chez Ninou",
     "description": "Trois gîtes pour deux personnes avec jardin arboré et piscine à Les Cluses, Pyrénées-Orientales, aux portes de l’Espagne.",
-    "image": "images/visite-poster.jpg",
+    "image": "images/hero-maison.jpg",
     "telephone": "+33674453766",
     "email": "chezninou66@gmail.com",
     "address": { "@type": "PostalAddress", "streetAddress": "14 avenue Virginie", "postalCode": "66480", "addressLocality": "Les Cluses", "addressRegion": "Occitanie", "addressCountry": "FR" },
+    "checkoutTime": "10:00",
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Piscine", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Climatisation", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Wifi", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Parking privé", "value": true }
+      { "@type": "LocationFeatureSpecification", "name": "Parking privé", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Laverie", "value": true }
     ]
   }
   </script>
@@ -84,33 +87,40 @@
 
   <main>
 
-    <!-- HERO : la visite virtuelle en plein écran -->
+    <!-- HERO : la grande photo de la maison, puis la visite 360° au clic -->
     <section class="hero" id="haut">
       <div class="hero-tour">
-        <img class="hero-poster" src="images/visite-poster.jpg" alt="" aria-hidden="true">
         <iframe class="hero-iframe" title="Visite virtuelle 360° de Chez Ninou" allow="fullscreen; gyroscope; accelerometer; xr-spatial-tracking" allowfullscreen></iframe>
+        <div class="hero-photo-cadre">
+          <img class="hero-photo" src="images/hero-maison.jpg" alt="La maison, le jardin et la piscine de Chez Ninou vus du ciel">
+        </div>
       </div>
 
       <div class="hero-voile">
         <div class="hero-texte">
           <p class="kicker">Les Cluses · Pyrénées-Orientales</p>
           <h1>Posez vos valises,<br><em>vous êtes chez Ninou.</em></h1>
-          <p class="hero-sous">Trois gîtes pour deux, un jardin arboré et une piscine, aux portes de l’Espagne. Visitez-les en 360° avant même d’arriver.</p>
+          <p class="hero-sous">Trois gîtes pour deux, un jardin arboré et une piscine, aux portes de l’Espagne.</p>
           <div class="hero-actions">
-            <button type="button" class="btn btn-grand" id="explorer"><span class="btn-ico">360°</span> Explorer la visite</button>
-            <a href="#gites" class="btn btn-ghost btn-grand">Découvrir les gîtes</a>
+            <button type="button" class="btn-visite" id="explorer">
+              <span class="btn-visite-ico">360°</span>
+              <span class="btn-visite-texte"><strong>Visite virtuelle 360°</strong><small>Entrez dans la maison, en direct</small></span>
+            </button>
+            <a href="#gites" class="hero-lien">Découvrir les gîtes</a>
           </div>
         </div>
         <div class="hero-bas">
-          <span class="badge-live"><i></i><span class="badge-texte">Chargement de la visite virtuelle…</span></span>
+          <span class="badge-live"><i></i><span class="badge-texte">Visite virtuelle 360° · 32 panoramas</span></span>
           <a href="#intro" class="hero-scroll" aria-label="Défiler vers le contenu">Défiler <span>↓</span></a>
         </div>
       </div>
 
+      <div class="hero-chargement" hidden><span class="spinner" aria-hidden="true"></span> Chargement de la visite…</div>
+
       <div class="hero-controles" hidden>
         <div class="scenes-chips" role="group" aria-label="Choisir un point de départ">
           <button type="button" class="chip actif" data-scene="" aria-pressed="true">Vue d’ensemble</button>
-          <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Le Studio</button>
+          <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Gîte RDC</button>
           <button type="button" class="chip" data-scene="blanc_1" aria-pressed="false">Gîte Bleu</button>
           <button type="button" class="chip" data-scene="rouge_1" aria-pressed="false">Gîte Rose</button>
           <button type="button" class="chip" data-scene="piscine" aria-pressed="false">Piscine</button>
@@ -126,7 +136,7 @@
       <ul class="stats wrap">
         <li><strong>3</strong><span>gîtes indépendants</span></li>
         <li><strong>2</strong><span>personnes par gîte</span></li>
-        <li><strong>1</strong><span>piscine partagée</span></li>
+        <li><strong>10h–20h</strong><span>piscine partagée</span></li>
         <li><strong>5 min</strong><span>de l’Espagne</span></li>
         <li><strong>30 min</strong><span>des plages</span></li>
       </ul>
@@ -141,18 +151,18 @@
           <p>Nichée au bout d’une impasse tranquille des Cluses, notre maison aux arches méditerranéennes abrite trois gîtes indépendants. Tous partagent un jardin arboré, une terrasse couverte avec vue sur les collines et une piscine pour les beaux jours.</p>
           <p>Chaque gîte est climatisé, avec coin cuisine et salle d’eau : vous êtes autonomes, comme à la maison. Et pour tout voir avant de réserver, la maison entière se visite en 360°.</p>
           <ul class="atouts">
-            <li>Piscine partagée</li>
+            <li>Piscine partagée, 10h–20h</li>
             <li>Jardin &amp; terrasse couverte</li>
             <li>Climatisation</li>
-            <li>Wifi fibre gratuit</li>
+            <li>Wifi fibre offert</li>
             <li>Parking privé, portail motorisé</li>
-            <li>Laverie sur place</li>
+            <li>Laverie &amp; étendage</li>
           </ul>
           <p class="signature">Ninou, votre hôte</p>
         </div>
         <div class="collage reveal">
-          <div class="collage-grande"><img src="images/hero.jpg" alt="Le jardin arboré, la table de pique-nique et les fenêtres aux grilles turquoise" loading="lazy"></div>
-          <div class="collage-petite"><img src="images/terrasse.jpg" alt="La terrasse couverte" loading="lazy"></div>
+          <div class="collage-grande"><img src="images/jardin.jpg" alt="Le jardin arboré, la table de pique-nique et les fenêtres aux grilles turquoise" loading="lazy"></div>
+          <div class="collage-petite"><img src="images/terrasse-min.jpg" alt="La terrasse couverte" loading="lazy"></div>
           <span class="collage-etiquette">Le jardin, l’été</span>
         </div>
       </div>
@@ -164,67 +174,90 @@
         <div class="section-tete">
           <p class="etiq">Nos hébergements</p>
           <h2>Trois gîtes, <em>trois ambiances.</em></h2>
-          <p class="intro">Des studios chaleureux pour deux personnes, tout équipés, autour du même jardin et de la piscine. Chacun se visite en 360°.</p>
+          <p class="intro">Des studios chaleureux pour deux personnes, tout équipés, autour du même jardin et de la piscine. Chacun a ses photos et se visite en 360°.</p>
         </div>
 
         <div class="gites-liste">
-          <article class="gite reveal">
-            <a class="gite-photo" href="images/studio.jpg" data-lightbox data-caption="Le Studio">
-              <img src="images/studio.jpg" alt="Le Studio : lit double, arches en pierre, coin cuisine et salle d’eau" loading="lazy">
-              <span class="gite-photo-badge">Agrandir</span>
-            </a>
+          <article class="gite reveal" id="gite-rdc">
+            <div class="gite-photos">
+              <a class="gite-photo" href="images/rdc-chambre.jpg" data-lightbox data-groupe="rdc" data-caption="Gîte rez-de-chaussée · la chambre et ses arches">
+                <img src="images/rdc-chambre.jpg" alt="Gîte rez-de-chaussée : lit double, arches en pierre vers la cuisine et la salle d’eau" loading="lazy">
+                <span class="gite-photo-badge">7 photos</span>
+              </a>
+              <div class="gite-vignettes">
+                <a href="images/rdc-cuisine.jpg" data-lightbox data-groupe="rdc" data-caption="Gîte rez-de-chaussée · le coin cuisine"><img src="images/rdc-cuisine-min.jpg" alt="Coin cuisine du gîte rez-de-chaussée" loading="lazy"></a>
+                <a href="images/rdc-salle-eau.jpg" data-lightbox data-groupe="rdc" data-caption="Gîte rez-de-chaussée · la salle d’eau"><img src="images/rdc-salle-eau-min.jpg" alt="Salle d’eau du gîte rez-de-chaussée" loading="lazy"></a>
+                <a href="images/rdc-chambre-2.jpg" data-lightbox data-groupe="rdc" data-caption="Gîte rez-de-chaussée · la porte-fenêtre sur le jardin"><img src="images/rdc-chambre-2-min.jpg" alt="La chambre côté jardin" loading="lazy"></a>
+                <a href="images/rdc-cuisine-3.jpg" class="plus" data-lightbox data-groupe="rdc" data-caption="Gîte rez-de-chaussée · plaques, micro-ondes, cafetière et bouilloire"><img src="images/rdc-cuisine-3-min.jpg" alt="Équipement de la cuisine" loading="lazy"><span>+3</span></a>
+              </div>
+              <a href="images/rdc-chambre-3.jpg" data-lightbox data-groupe="rdc" data-caption="Gîte rez-de-chaussée · la chambre" hidden></a>
+              <a href="images/rdc-cuisine-2.jpg" data-lightbox data-groupe="rdc" data-caption="Gîte rez-de-chaussée · le coin repas" hidden></a>
+            </div>
             <div class="gite-texte">
               <span class="num">01</span>
-              <h3>Le Studio</h3>
-              <p class="gite-meta">2 personnes · rez-de-chaussée · meublé de tourisme 1★</p>
-              <p>De plain-pied, avec ses arches en pierre et son accès direct au jardin. Lit double, coin cuisine équipé, salle d’eau avec douche à l’italienne et climatisation.</p>
+              <h3>Le Gîte Rez-de-chaussée</h3>
+              <p class="gite-meta">2 personnes · plain-pied · meublé de tourisme 1★</p>
+              <p>De plain-pied, avec ses arches en pierre et sa porte-fenêtre sur le jardin. Lit double, coin cuisine équipé, salle d’eau avec douche à l’italienne et climatisation. Classé meublé de tourisme une étoile en 2026.</p>
               <ul class="equip">
                 <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li><li>Accès jardin</li>
               </ul>
               <div class="gite-actions">
-                <button type="button" class="btn" data-visite="chambre_rdc_1"><span class="btn-ico">360°</span> Visiter le Studio</button>
-                <a href="#contact" class="lien-fleche" data-gite="Le Studio">Demander les dates</a>
+                <button type="button" class="btn" data-visite="chambre_rdc_1"><span class="btn-ico">360°</span> Visiter le gîte</button>
+                <a href="#contact" class="lien-fleche" data-gite="Le Gîte Rez-de-chaussée">Demander les dates</a>
               </div>
               <p class="gite-prix">Tarif sur demande</p>
             </div>
           </article>
 
-          <article class="gite reveal">
-            <a class="gite-photo" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu">
-              <img src="images/gite-bleu.jpg" alt="Le Gîte Bleu : lit double, coin cuisine et coin repas aux tons bleus" loading="lazy">
-              <span class="gite-photo-badge">Agrandir</span>
-            </a>
+          <article class="gite reveal" id="gite-bleu">
+            <div class="gite-photos">
+              <a class="gite-photo" href="images/bleu-chambre.jpg" data-lightbox data-groupe="bleu" data-caption="Gîte Bleu · la chambre">
+                <img src="images/bleu-chambre.jpg" alt="Gîte Bleu : lit double aux tons bleus, tableau de phare, coin cuisine" loading="lazy">
+                <span class="gite-photo-badge">3 photos</span>
+              </a>
+              <div class="gite-vignettes">
+                <a href="images/bleu-cuisine.jpg" data-lightbox data-groupe="bleu" data-caption="Gîte Bleu · coin cuisine, télé et coin repas"><img src="images/bleu-cuisine-min.jpg" alt="Coin cuisine et coin repas du Gîte Bleu" loading="lazy"></a>
+                <a href="images/bleu-vue.jpg" data-lightbox data-groupe="bleu" data-caption="Gîte Bleu · vue d’ensemble"><img src="images/bleu-vue-min.jpg" alt="Vue d’ensemble du Gîte Bleu" loading="lazy"></a>
+              </div>
+            </div>
             <div class="gite-texte">
               <span class="num">02</span>
               <h3>Le Gîte Bleu</h3>
               <p class="gite-meta">2 personnes · coin cuisine · salle d’eau</p>
-              <p>Une ambiance marine, claire et apaisante. Lit double, coin repas, cuisine équipée, salle d’eau et climatisation.</p>
+              <p>Une ambiance marine, claire et apaisante. Lit double, télévision, coin repas, cuisine équipée, salle d’eau et climatisation.</p>
               <ul class="equip">
-                <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li><li>Coin repas</li>
+                <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Télévision</li><li>Wifi</li>
               </ul>
               <div class="gite-actions">
-                <button type="button" class="btn" data-visite="blanc_1"><span class="btn-ico">360°</span> Visiter le Gîte Bleu</button>
+                <button type="button" class="btn" data-visite="blanc_1"><span class="btn-ico">360°</span> Visiter le gîte</button>
                 <a href="#contact" class="lien-fleche" data-gite="Le Gîte Bleu">Demander les dates</a>
               </div>
               <p class="gite-prix">Tarif sur demande</p>
             </div>
           </article>
 
-          <article class="gite reveal">
-            <a class="gite-photo" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose">
-              <img src="images/gite-rose.jpg" alt="Le Gîte Rose : lit double, coin repas et rideaux roses" loading="lazy">
-              <span class="gite-photo-badge">Agrandir</span>
-            </a>
+          <article class="gite reveal" id="gite-rose">
+            <div class="gite-photos">
+              <a class="gite-photo" href="images/rose-chambre.jpg" data-lightbox data-groupe="rose" data-caption="Gîte Rose · la chambre">
+                <img src="images/rose-chambre.jpg" alt="Gîte Rose : lit double, rideaux roses, coin repas et télévision" loading="lazy">
+                <span class="gite-photo-badge">4 photos</span>
+              </a>
+              <div class="gite-vignettes">
+                <a href="images/rose-cuisine.jpg" data-lightbox data-groupe="rose" data-caption="Gîte Rose · le coin cuisine et le coin repas"><img src="images/rose-cuisine-min.jpg" alt="Coin cuisine du Gîte Rose" loading="lazy"></a>
+                <a href="images/rose-salle-de-bain.jpg" data-lightbox data-groupe="rose" data-caption="Gîte Rose · la salle de bain avec baignoire"><img src="images/rose-salle-de-bain-min.jpg" alt="Salle de bain du Gîte Rose avec baignoire" loading="lazy"></a>
+                <a href="images/rose-vue.jpg" data-lightbox data-groupe="rose" data-caption="Gîte Rose · vue d’ensemble"><img src="images/rose-vue-min.jpg" alt="Vue d’ensemble du Gîte Rose" loading="lazy"></a>
+              </div>
+            </div>
             <div class="gite-texte">
               <span class="num">03</span>
               <h3>Le Gîte Rose</h3>
-              <p class="gite-meta">2 personnes · coin cuisine · salle d’eau</p>
-              <p>Un cocon chaleureux aux tons rosés, ouvert sur la terrasse couverte. Lit double, coin repas, cuisine équipée, salle d’eau et climatisation.</p>
+              <p class="gite-meta">2 personnes · coin cuisine · salle de bain</p>
+              <p>Un cocon chaleureux aux tons rosés, avec une vraie salle de bain et sa baignoire. Lit double, télévision, coin repas, cuisine équipée et climatisation.</p>
               <ul class="equip">
-                <li>Lit double</li><li>Cuisine équipée</li><li>Douche &amp; WC</li><li>Climatisation</li><li>Wifi</li><li>Terrasse</li>
+                <li>Lit double</li><li>Cuisine équipée</li><li>Baignoire &amp; WC</li><li>Climatisation</li><li>Télévision</li><li>Wifi</li>
               </ul>
               <div class="gite-actions">
-                <button type="button" class="btn" data-visite="rouge_1"><span class="btn-ico">360°</span> Visiter le Gîte Rose</button>
+                <button type="button" class="btn" data-visite="rouge_1"><span class="btn-ico">360°</span> Visiter le gîte</button>
                 <a href="#contact" class="lien-fleche" data-gite="Le Gîte Rose">Demander les dates</a>
               </div>
               <p class="gite-prix">Tarif sur demande</p>
@@ -244,23 +277,23 @@
         </div>
         <div class="scenes reveal">
           <button type="button" class="scene" data-visite="">
-            <img src="images/visite-poster.jpg" alt="" loading="lazy">
+            <img src="images/visite-poster-min.jpg" alt="" loading="lazy">
             <span class="scene-nom">Vue d’ensemble</span><span class="scene-360">360°</span>
           </button>
           <button type="button" class="scene" data-visite="chambre_rdc_1">
-            <img src="images/studio.jpg" alt="" loading="lazy">
-            <span class="scene-nom">Le Studio</span><span class="scene-360">360°</span>
+            <img src="images/rdc-chambre-min.jpg" alt="" loading="lazy">
+            <span class="scene-nom">Gîte rez-de-chaussée</span><span class="scene-360">360°</span>
           </button>
           <button type="button" class="scene" data-visite="blanc_1">
-            <img src="images/gite-bleu.jpg" alt="" loading="lazy">
+            <img src="images/bleu-chambre-min.jpg" alt="" loading="lazy">
             <span class="scene-nom">Le Gîte Bleu</span><span class="scene-360">360°</span>
           </button>
           <button type="button" class="scene" data-visite="rouge_1">
-            <img src="images/gite-rose.jpg" alt="" loading="lazy">
+            <img src="images/rose-chambre-min.jpg" alt="" loading="lazy">
             <span class="scene-nom">Le Gîte Rose</span><span class="scene-360">360°</span>
           </button>
           <button type="button" class="scene" data-visite="piscine">
-            <img src="images/piscine.jpg" alt="" loading="lazy">
+            <img src="images/piscine-min.jpg" alt="" loading="lazy">
             <span class="scene-nom">La piscine</span><span class="scene-360">360°</span>
           </button>
         </div>
@@ -268,24 +301,22 @@
       </div>
     </section>
 
-    <!-- GALERIE -->
+    <!-- GALERIE : la maison et les extérieurs -->
     <section class="section" id="galerie">
       <div class="wrap">
         <div class="section-tete">
           <p class="etiq">En images</p>
           <h2>La maison, <em>en photos.</em></h2>
-          <p class="intro">Un aperçu des intérieurs, du jardin et de la piscine. Cliquez pour agrandir.</p>
+          <p class="intro">La piscine, le jardin, les terrasses et la maison vue du ciel. Les photos de chaque gîte sont dans sa fiche, juste au-dessus.</p>
         </div>
         <div class="galerie">
-          <a class="g-item reveal" href="images/studio.jpg" data-lightbox data-caption="Le Studio et ses arches en pierre"><img src="images/studio.jpg" alt="Le Studio et ses arches en pierre" loading="lazy"></a>
-          <a class="g-item reveal" href="images/gite-bleu.jpg" data-lightbox data-caption="Le Gîte Bleu"><img src="images/gite-bleu.jpg" alt="Le Gîte Bleu" loading="lazy"></a>
-          <a class="g-item reveal" href="images/gite-rose.jpg" data-lightbox data-caption="Le Gîte Rose"><img src="images/gite-rose.jpg" alt="Le Gîte Rose" loading="lazy"></a>
-          <a class="g-item reveal" href="images/chambre.jpg" data-lightbox data-caption="Le Studio, côté jardin"><img src="images/chambre.jpg" alt="Le Studio, côté jardin" loading="lazy"></a>
-          <a class="g-item reveal" href="images/cuisine.jpg" data-lightbox data-caption="Coin cuisine équipé"><img src="images/cuisine.jpg" alt="Coin cuisine équipé" loading="lazy"></a>
-          <a class="g-item reveal" href="images/salle-eau.jpg" data-lightbox data-caption="Salle d’eau avec douche à l’italienne"><img src="images/salle-eau.jpg" alt="Salle d’eau avec douche à l’italienne" loading="lazy"></a>
-          <a class="g-item reveal" href="images/terrasse.jpg" data-lightbox data-caption="La terrasse couverte"><img src="images/terrasse.jpg" alt="La terrasse couverte" loading="lazy"></a>
-          <a class="g-item reveal" href="images/hero.jpg" data-lightbox data-caption="Le jardin arboré"><img src="images/hero.jpg" alt="Le jardin arboré" loading="lazy"></a>
-          <a class="g-item reveal" href="images/visite-poster.jpg" data-lightbox data-caption="La maison, le jardin et la piscine vus du ciel"><img src="images/visite-poster.jpg" alt="La maison, le jardin et la piscine vus du ciel" loading="lazy"></a>
+          <a class="g-item reveal" href="images/piscine.jpg" data-lightbox data-groupe="maison" data-caption="La piscine et la maison"><img src="images/piscine.jpg" alt="La piscine devant la maison" loading="lazy"></a>
+          <a class="g-item reveal" href="images/maison-facade.jpg" data-lightbox data-groupe="maison" data-caption="La façade et le parking"><img src="images/maison-facade-min.jpg" alt="La façade de la maison et ses garages" loading="lazy"></a>
+          <a class="g-item reveal" href="images/jardin.jpg" data-lightbox data-groupe="maison" data-caption="Le jardin arboré"><img src="images/jardin-min.jpg" alt="Le jardin arboré" loading="lazy"></a>
+          <a class="g-item reveal" href="images/terrasse.jpg" data-lightbox data-groupe="maison" data-caption="La terrasse couverte du bas"><img src="images/terrasse-min.jpg" alt="La terrasse couverte" loading="lazy"></a>
+          <a class="g-item reveal" href="images/veranda.jpg" data-lightbox data-groupe="maison" data-caption="La véranda"><img src="images/veranda-min.jpg" alt="La véranda en canisses" loading="lazy"></a>
+          <a class="g-item reveal" href="images/visite-poster.jpg" data-lightbox data-groupe="maison" data-caption="La maison, le jardin et la piscine vus du ciel"><img src="images/visite-poster-min.jpg" alt="La maison vue du ciel" loading="lazy"></a>
+          <a class="g-item reveal" href="images/vue-du-ciel.jpg" data-lightbox data-groupe="maison" data-caption="Le terrain vu du ciel"><img src="images/vue-du-ciel-min.jpg" alt="Le terrain vu du ciel" loading="lazy"></a>
         </div>
       </div>
     </section>
@@ -340,14 +371,15 @@
         <div class="section-tete">
           <p class="etiq">Infos pratiques</p>
           <h2>Bon à savoir <em>avant d’arriver.</em></h2>
+          <p class="intro">Les gîtes fonctionnent en autonomie complète : voici l’essentiel pour un séjour simple et tranquille.</p>
         </div>
         <dl class="infos reveal">
-          <div><dt>Arrivée &amp; départ</dt><dd>Arrivée à partir de [16h], départ avant [10h]. <span class="mini-note">[à compléter]</span></dd></div>
-          <div><dt>Linge &amp; ménage</dt><dd>Draps et serviettes [fournis / en option]. <span class="mini-note">[à compléter]</span></dd></div>
-          <div><dt>Piscine</dt><dd>Partagée entre les gîtes, ouverte à la belle saison. Les enfants restent sous la surveillance des parents.</dd></div>
-          <div><dt>Animaux</dt><dd>[Acceptés sur demande / non acceptés]. <span class="mini-note">[à compléter]</span></dd></div>
-          <div><dt>Accès</dt><dd>14 avenue Virginie, Les Cluses, à 5 minutes de la sortie Le Boulou de l’A9 et de la frontière. Parking privé avec portail motorisé.</dd></div>
-          <div><dt>Paiement</dt><dd>Acompte à la réservation, solde à l’arrivée. Taxe de séjour en sus. <span class="mini-note">[à confirmer]</span></dd></div>
+          <div><dt>Arrivée &amp; départ</dt><dd>L’heure d’arrivée se convient ensemble à la réservation. Le jour du départ, libération du gîte avant 10h : l’état des lieux et la remise des clés se font 15 minutes avant.</dd></div>
+          <div><dt>Piscine</dt><dd>Ouverte tous les jours de 10h à 20h, réservée aux locataires. Pas de baignade le soir ni la nuit, plongeons interdits. Les enfants restent sous la surveillance des parents.</dd></div>
+          <div><dt>Wifi &amp; confort</dt><dd>Wifi fibre offert, identifiants remis à l’arrivée. Télécommandes de télévision et de climatisation dans chaque gîte. Fenêtres fermées quand la climatisation tourne, et on l’éteint en sortant.</dd></div>
+          <div><dt>Espaces partagés</dt><dd>Lave-linge et étendage à disposition, ainsi que la terrasse couverte du bas et le matériel de ménage : chacun laisse propre pour les suivants.</dd></div>
+          <div><dt>Accès &amp; parking</dt><dd>14 avenue Virginie, Les Cluses, à 5 minutes de la sortie Le Boulou de l’A9 et de la frontière. Parking privé derrière un portail motorisé (télécommande ou code remis à l’arrivée). Conteneurs de tri au bout de l’impasse.</dd></div>
+          <div><dt>Sur place</dt><dd>Vous êtes chez vous, en toute autonomie. Pour toute question ou imprévu, un SMS au 06 74 45 37 66 et on vous répond au plus vite. <span class="mini-note">Linge, animaux et modalités de paiement : à préciser avec Ninou.</span></dd></div>
         </dl>
       </div>
     </section>
@@ -375,7 +407,7 @@
             <label>Gîte souhaité
               <select name="gite">
                 <option>Peu importe</option>
-                <option>Le Studio</option>
+                <option>Le Gîte Rez-de-chaussée</option>
                 <option>Le Gîte Bleu</option>
                 <option>Le Gîte Rose</option>
               </select>
@@ -432,7 +464,7 @@
       <span class="modal-titre">Visite 360° · <em id="modal-scene-nom">Vue d’ensemble</em></span>
       <div class="scenes-chips modal-scenes" role="group" aria-label="Changer de pièce">
         <button type="button" class="chip" data-scene="" aria-pressed="false">Vue d’ensemble</button>
-        <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Le Studio</button>
+        <button type="button" class="chip" data-scene="chambre_rdc_1" aria-pressed="false">Gîte RDC</button>
         <button type="button" class="chip" data-scene="blanc_1" aria-pressed="false">Gîte Bleu</button>
         <button type="button" class="chip" data-scene="rouge_1" aria-pressed="false">Gîte Rose</button>
         <button type="button" class="chip" data-scene="piscine" aria-pressed="false">Piscine</button>
@@ -445,13 +477,13 @@
     <iframe title="Visite virtuelle 360° de Chez Ninou" allow="fullscreen; gyroscope; accelerometer; xr-spatial-tracking" allowfullscreen></iframe>
   </div>
 
-  <!-- Lightbox photos -->
+  <!-- Lightbox photos (une série par gîte, une pour la maison) -->
   <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog" aria-label="Photo agrandie">
     <button class="lb-fermer" type="button" aria-label="Fermer">×</button>
     <button class="lb-prec" type="button" aria-label="Photo précédente">‹</button>
     <figure>
       <img src="" alt="">
-      <figcaption></figcaption>
+      <figcaption><span class="lb-legende"></span><span class="lb-compteur"></span></figcaption>
     </figure>
     <button class="lb-suiv" type="button" aria-label="Photo suivante">›</button>
   </div>

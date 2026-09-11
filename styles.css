@@ -1,5 +1,5 @@
 /* Chez Ninou · gîtes 360° — feuille de style unique.
-   Palette, typographie et rythme dans :root. Mobile en bas de fichier. */
+   Palette, typographie et rythme dans :root. Tablette et mobile en bas de fichier. */
 
 :root {
   --encre: #1c1916;
@@ -77,18 +77,14 @@ p { margin: 0 0 16px; }
   transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
 }
 .btn:hover { background: var(--terre-fonce); transform: translateY(-2px); }
-.btn-grand { padding: 18px 34px 18px 22px; font-size: 16px; }
 .btn-mini { padding: 10px 20px; font-size: 14px; box-shadow: none; }
-.btn-ghost { background: rgba(245, 239, 228, .08); color: var(--creme); box-shadow: inset 0 0 0 1.5px rgba(245, 239, 228, .55); backdrop-filter: blur(6px); padding-left: 34px; }
-.btn-ghost:hover { background: rgba(245, 239, 228, .18); }
 .btn-clair { background: var(--creme); color: var(--encre); box-shadow: none; }
 .btn-clair:hover { background: #fff; }
 .btn-ico {
-  display: inline-grid; place-items: center; height: 32px; padding: 0 9px; border-radius: 999px;
+  display: inline-grid; place-items: center; height: 28px; padding: 0 9px; border-radius: 999px;
   background: rgba(255, 255, 255, .18); font-size: 12px; letter-spacing: .06em; font-weight: 500;
 }
-.btn:not(.btn-grand) { padding-left: 16px; }
-.btn:not(.btn-grand) .btn-ico { height: 28px; }
+.btn:has(.btn-ico) { padding-left: 16px; }
 .lien-fleche { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; font-size: 15px; color: var(--terre-fonce); text-decoration: none; }
 .lien-fleche::after { content: '→'; transition: transform .2s ease; }
 .lien-fleche:hover::after { transform: translateX(4px); }
@@ -148,44 +144,89 @@ body.immersif .entete { transform: translateY(-110%); }
 .menu-mobile-bas a { text-decoration: none; }
 .menu-mobile-bas .btn { justify-content: center; margin-top: 6px; }
 
-/* ---------- Hero : la visite 360° ---------- */
-.hero { position: relative; height: 100vh; height: 100svh; min-height: 600px; background: var(--encre); color: var(--creme); overflow: hidden; isolation: isolate; }
+/* ---------- Hero : la photo de la maison, puis la visite 360° ---------- */
+.hero { position: relative; height: 100vh; height: 100svh; min-height: 620px; background: var(--encre); color: var(--creme); overflow: hidden; isolation: isolate; }
 .hero-tour { position: absolute; inset: 0; }
 .hero-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: var(--encre); }
-.hero-poster {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
-  transform-origin: 55% 45%; animation: kenburns 22s ease-in-out infinite alternate;
-  transition: opacity 1.4s ease;
+
+/* La photo recouvre la visite tant qu'on n'a pas cliqué. */
+.hero-photo-cadre { position: absolute; inset: 0; z-index: 1; overflow: hidden; transition: opacity 1.6s ease; }
+.hero-photo {
+  width: 100%; height: 100%; object-fit: cover; transform-origin: 52% 42%;
+  animation: respire 34s ease-in-out infinite alternate;
+  transition: transform 2.8s cubic-bezier(.2, .7, .2, 1);
 }
-.hero.pret .hero-poster { opacity: 0; pointer-events: none; }
-@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.1); } }
+@keyframes respire { from { scale: 1; } to { scale: 1.08; } }
+.hero.transition .hero-photo, .hero.immersif .hero-photo { transform: scale(1.14); }
+.hero.immersif .hero-photo-cadre { opacity: 0; pointer-events: none; }
 
 .hero-voile {
   position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: flex-end;
-  background: linear-gradient(180deg, rgba(28, 25, 22, .5) 0%, rgba(28, 25, 22, .3) 35%, rgba(28, 25, 22, .45) 60%, rgba(28, 25, 22, .92) 100%);
-  backdrop-filter: blur(3px) saturate(1.1); -webkit-backdrop-filter: blur(3px) saturate(1.1);
-  transition: opacity .7s ease;
+  background: linear-gradient(180deg, rgba(28, 25, 22, .42) 0%, rgba(28, 25, 22, .1) 32%, rgba(28, 25, 22, .3) 58%, rgba(28, 25, 22, .9) 100%);
+  transition: opacity .9s ease;
 }
+.hero-voile::after { content: ''; position: absolute; inset: 0; background: rgba(28, 25, 22, .45); opacity: 0; transition: opacity 1s ease; pointer-events: none; }
+.hero.transition .hero-voile::after { opacity: 1; }
 .hero.immersif .hero-voile { opacity: 0; pointer-events: none; }
-.hero-texte { width: min(920px, 100% - 2 * clamp(20px, 5vw, 72px)); margin: 0 auto; text-align: center; }
+
+.hero-texte { position: relative; z-index: 1; width: min(940px, 100% - 2 * clamp(20px, 5vw, 72px)); margin: 0 auto; text-align: center; }
 .hero .kicker { text-transform: uppercase; letter-spacing: .26em; font-size: 12px; font-weight: 500; color: var(--or); margin: 0 0 18px; }
 .hero h1 { font-size: clamp(42px, 7.2vw, 108px); line-height: .98; text-shadow: 0 4px 40px rgba(0, 0, 0, .45); }
 .hero h1 em { color: var(--creme); }
-.hero-sous { font-size: clamp(16px, 1.6vw, 20px); max-width: 580px; margin: 24px auto 32px; color: rgba(245, 239, 228, .88); }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: center; }
+.hero-sous { font-size: clamp(16px, 1.6vw, 20px); max-width: 560px; margin: 22px auto 0; color: rgba(245, 239, 228, .88); }
+.hero-actions { display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 30px; }
+
+/* Le grand bouton de la visite */
+.btn-visite {
+  display: inline-flex; align-items: center; gap: 18px; padding: 12px 38px 12px 12px; border-radius: 999px; border: 0; cursor: pointer;
+  background: var(--terre); color: #fff; text-align: left;
+  box-shadow: 0 20px 50px rgba(180, 96, 61, .45);
+  animation: halo 2.8s ease-out infinite;
+  transition: transform .25s ease, background .25s ease, opacity .3s ease;
+}
+.btn-visite:hover { transform: translateY(-3px) scale(1.02); background: var(--terre-fonce); }
+.btn-visite-ico {
+  display: grid; place-items: center; width: 62px; height: 62px; border-radius: 50%; flex: none;
+  background: rgba(255, 255, 255, .16); border: 1.5px solid rgba(255, 255, 255, .4);
+  font-weight: 500; font-size: 15px; letter-spacing: .06em;
+}
+.btn-visite-texte { display: flex; flex-direction: column; line-height: 1.1; }
+.btn-visite-texte strong { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; letter-spacing: -.005em; }
+.btn-visite-texte small { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; opacity: .85; margin-top: 6px; font-weight: 400; }
+@keyframes halo {
+  0% { box-shadow: 0 20px 50px rgba(180, 96, 61, .45), 0 0 0 0 rgba(245, 239, 228, .5); }
+  100% { box-shadow: 0 20px 50px rgba(180, 96, 61, .45), 0 0 0 26px rgba(245, 239, 228, 0); }
+}
+.hero.transition .btn-visite { pointer-events: none; opacity: .7; animation: none; }
+.hero-lien {
+  color: rgba(245, 239, 228, .85); text-decoration: none; font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+  border-bottom: 1px solid rgba(245, 239, 228, .35); padding-bottom: 3px; transition: color .2s ease, border-color .2s ease;
+}
+.hero-lien:hover { color: #fff; border-color: #fff; }
 
 .hero-bas {
+  position: relative; z-index: 1;
   display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
   margin-top: clamp(28px, 5vh, 56px); padding: 18px clamp(20px, 5vw, 72px) max(18px, env(safe-area-inset-bottom));
   border-top: 1px solid var(--ligne-clair); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: rgba(245, 239, 228, .7);
 }
 .badge-live { display: inline-flex; align-items: center; gap: 10px; }
-.badge-live i { width: 8px; height: 8px; border-radius: 50%; background: var(--or); box-shadow: 0 0 0 0 rgba(201, 165, 106, .6); animation: pulse 1.8s ease-out infinite; }
-.hero.pret .badge-live i { background: #7fc47a; box-shadow: 0 0 0 0 rgba(127, 196, 122, .6); }
+.badge-live i { width: 8px; height: 8px; border-radius: 50%; background: var(--or); animation: pulse 1.8s ease-out infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(201, 165, 106, .55); } 100% { box-shadow: 0 0 0 10px rgba(201, 165, 106, 0); } }
 .hero-scroll { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
 .hero-scroll span { display: inline-block; animation: flotte 2s ease-in-out infinite; }
 @keyframes flotte { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+/* Indicateur de chargement de la visite */
+.hero-chargement {
+  position: absolute; left: 50%; bottom: 96px; transform: translateX(-50%); z-index: 3;
+  display: inline-flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 999px;
+  background: rgba(28, 25, 22, .82); backdrop-filter: blur(10px); border: 1px solid var(--ligne-clair);
+  font-size: 13px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap;
+}
+.hero-chargement[hidden] { display: none; }
+.spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(245, 239, 228, .25); border-top-color: var(--or); animation: tourne .9s linear infinite; }
+@keyframes tourne { to { transform: rotate(360deg); } }
 
 /* Contrôles du mode immersif */
 .hero-controles {
@@ -193,8 +234,10 @@ body.immersif .entete { transform: translateY(-110%); }
   display: flex; align-items: center; gap: 6px; max-width: calc(100% - 24px); padding: 6px;
   background: rgba(28, 25, 22, .78); backdrop-filter: blur(12px); border: 1px solid var(--ligne-clair); border-radius: 999px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+  animation: monte .5s ease-out;
 }
 .hero-controles[hidden] { display: none; }
+@keyframes monte { from { opacity: 0; transform: translate(-50%, 16px); } to { opacity: 1; transform: translate(-50%, 0); } }
 .scenes-chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
 .scenes-chips::-webkit-scrollbar { display: none; }
 .controles-sep { width: 1px; height: 24px; background: var(--ligne-clair); margin: 0 4px; flex: none; }
@@ -216,7 +259,7 @@ body.immersif .entete { transform: translateY(-110%); }
 .stats { list-style: none; margin: 0 auto; padding: 26px 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .stats li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; border-left: 1px solid var(--ligne); }
 .stats li:first-child { border-left: 0; }
-.stats strong { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 500; line-height: 1; color: var(--encre); }
+.stats strong { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 500; line-height: 1; color: var(--encre); white-space: nowrap; }
 .stats span { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--faded); }
 
 /* ---------- Sections ---------- */
@@ -240,20 +283,24 @@ body.immersif .entete { transform: translateY(-110%); }
 
 /* ---------- Gîtes ---------- */
 .gites-liste { display: flex; flex-direction: column; }
-.gite { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 80px); align-items: center; padding: clamp(40px, 5vw, 72px) 0; border-top: 1px solid var(--ligne); }
+.gite { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 5vw, 72px); align-items: center; padding: clamp(40px, 5vw, 72px) 0; border-top: 1px solid var(--ligne); }
 .gite:first-child { border-top: 0; padding-top: 0; }
 .gite:last-child { padding-bottom: 0; }
-.gite:nth-child(even) .gite-photo { order: 2; }
+.gite:nth-child(even) .gite-photos { order: 2; }
+.gite-photos { display: grid; gap: 10px; }
 .gite-photo { position: relative; display: block; aspect-ratio: 4 / 3; border-radius: var(--rayon); overflow: hidden; box-shadow: var(--ombre); background: var(--creme); }
 .gite-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
-.gite-photo:hover img { transform: scale(1.05); }
-.gite-photo-badge { position: absolute; right: 14px; bottom: 14px; font-size: 12px; letter-spacing: .06em; padding: 6px 12px; border-radius: 999px; background: rgba(245, 239, 228, .92); color: var(--encre); opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; }
-.gite-photo:hover .gite-photo-badge { opacity: 1; transform: none; }
+.gite-photo:hover img { transform: scale(1.04); }
+.gite-photo-badge { position: absolute; right: 14px; bottom: 14px; font-size: 12px; letter-spacing: .06em; padding: 6px 12px; border-radius: 999px; background: rgba(245, 239, 228, .92); color: var(--encre); }
+.gite-vignettes { display: flex; gap: 10px; }
+.gite-vignettes a { position: relative; flex: 1; display: block; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: var(--creme); }
+.gite-vignettes img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.gite-vignettes a:hover img { transform: scale(1.06); }
+.gite-vignettes a.plus span { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(28, 25, 22, .55); color: var(--creme); font-size: 20px; font-weight: 500; }
 .num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 16px; letter-spacing: .3em; color: var(--terre); margin-bottom: 10px; }
 .gite-meta { color: var(--olive); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 12px 0 18px; }
 .equip { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.equip li { font-size: 12.5px; letter-spacing: .03em; padding: 5px 11px; border-radius: 999px; background: var(--creme); border: 1px solid var(--ligne); }
-.section-alt .equip li { background: var(--blanc); }
+.equip li { font-size: 12.5px; letter-spacing: .03em; padding: 5px 11px; border-radius: 999px; background: var(--blanc); border: 1px solid var(--ligne); }
 .gite-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 26px; }
 .gite-prix { margin: 16px 0 0; font-size: 14px; color: var(--faded); letter-spacing: .04em; }
 
@@ -276,6 +323,7 @@ body.immersif .entete { transform: translateY(-110%); }
 /* ---------- Galerie ---------- */
 .galerie { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(150px, 18vw, 250px); gap: 14px; }
 .galerie .g-item:first-child { grid-column: span 2; grid-row: span 2; }
+.galerie .g-item:nth-child(6), .galerie .g-item:nth-child(7) { grid-column: span 2; }
 .g-item { display: block; border-radius: 14px; overflow: hidden; background: var(--creme-2); }
 .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .g-item:hover img { transform: scale(1.05); }
@@ -353,7 +401,8 @@ body.immersif .entete { transform: translateY(-110%); }
 .lightbox[hidden] { display: none; }
 .lightbox figure { margin: 0; max-width: 100%; max-height: 100%; text-align: center; }
 .lightbox img { max-width: 100%; max-height: calc(100vh - 140px); width: auto; height: auto; margin: 0 auto; border-radius: 8px; box-shadow: 0 30px 80px rgba(0, 0, 0, .5); }
-.lightbox figcaption { color: rgba(245, 239, 228, .85); margin-top: 14px; font-size: 15px; letter-spacing: .03em; }
+.lightbox figcaption { display: flex; justify-content: center; gap: 18px; color: rgba(245, 239, 228, .85); margin-top: 14px; font-size: 15px; letter-spacing: .03em; }
+.lb-compteur { color: rgba(245, 239, 228, .5); }
 .lightbox button {
   position: absolute; background: none; border: 0; color: #fff; cursor: pointer;
   font-size: 44px; line-height: 1; width: 56px; height: 56px; border-radius: 50%; opacity: .75;
@@ -369,7 +418,7 @@ body.immersif .entete { transform: translateY(-110%); }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .hero-poster, .hero-scroll span, .badge-live i { animation: none; }
+  .hero-photo, .hero-scroll span, .badge-live i, .btn-visite { animation: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -387,18 +436,23 @@ body.immersif .entete { transform: translateY(-110%); }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 780px) {
-  .hero { min-height: 560px; }
+  .hero { min-height: 600px; }
   .hero h1 { font-size: clamp(40px, 11vw, 60px); }
-  .hero-sous { font-size: 16px; margin: 18px 0 24px; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-sous { font-size: 16px; margin-top: 16px; }
+  .hero-actions { margin-top: 24px; gap: 16px; }
+  .btn-visite { width: 100%; padding: 10px 20px 10px 10px; gap: 14px; }
+  .btn-visite-ico { width: 54px; height: 54px; font-size: 13px; }
+  .btn-visite-texte strong { font-size: 24px; }
+  .btn-visite-texte small { font-size: 11px; }
   .hero-bas { font-size: 11px; }
+  .hero-chargement { bottom: 84px; font-size: 12px; }
   .hero-controles { flex-wrap: wrap; justify-content: center; border-radius: 22px; max-width: calc(100% - 16px); }
   .hero-controles .scenes-chips { width: 100%; justify-content: flex-start; }
   .controles-sep { display: none; }
 
   .stats { grid-template-columns: repeat(3, 1fr); padding: 20px 0; }
   .stats li { border-left: 0; }
-  .stats strong { font-size: 30px; }
+  .stats strong { font-size: 28px; }
   .stats span { font-size: 11px; }
 
   .deux-cols { grid-template-columns: 1fr; gap: 40px; }
@@ -408,7 +462,8 @@ body.immersif .entete { transform: translateY(-110%); }
   .atouts { grid-template-columns: 1fr; }
 
   .gite { grid-template-columns: 1fr; gap: 24px; }
-  .gite:nth-child(even) .gite-photo { order: 0; }
+  .gite:nth-child(even) .gite-photos { order: 0; }
+  .gite-vignettes { gap: 8px; }
   .gite-actions { gap: 16px; }
   .gite-actions .btn { width: 100%; justify-content: center; }
 
@@ -418,6 +473,7 @@ body.immersif .entete { transform: translateY(-110%); }
 
   .galerie { grid-template-columns: 1fr 1fr; grid-auto-rows: 42vw; gap: 10px; }
   .galerie .g-item:first-child { grid-column: span 2; grid-row: span 1; }
+  .galerie .g-item:nth-child(6), .galerie .g-item:nth-child(7) { grid-column: span 1; }
 
   .bande { min-height: 40vh; }
   .infos { grid-template-columns: 1fr; }
