@@ -1,0 +1,134 @@
+/* Chez Ninou · gîtes de charme — feuille de style unique.
+   Palette naturelle et chaleureuse. Modifiable facilement via les variables. */
+
+:root {
+  --creme: #f7f2e9;
+  --creme-2: #efe7d8;
+  --encre: #33302b;
+  --faded: #8a8377;
+  --terre: #b56a4a;      /* terracotta, couleur d'accent */
+  --terre-fonce: #9a5539;
+  --olive: #6f7a52;
+  --ligne: #e2d8c6;
+  --ombre: 0 18px 40px rgba(51, 48, 43, 0.10);
+  --rayon: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 300;
+  color: var(--encre);
+  background: var(--creme);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; line-height: 1.12; margin: 0; }
+h2 { font-size: clamp(28px, 4.4vw, 44px); }
+h3 { font-size: 24px; }
+
+a { color: inherit; }
+
+.etiq {
+  text-transform: uppercase; letter-spacing: 0.22em; font-size: 12px;
+  color: var(--terre); font-weight: 500; margin: 0 0 10px;
+}
+.etiq.center, .center { text-align: center; }
+.intro { color: var(--faded); max-width: 620px; margin: 8px auto 0; }
+.mini-note { color: var(--faded); font-size: 0.82em; font-style: italic; }
+
+/* Boutons */
+.btn {
+  display: inline-block; background: var(--terre); color: #fff; text-decoration: none;
+  padding: 14px 26px; border-radius: 999px; font-weight: 500; font-size: 15px;
+  letter-spacing: 0.02em; transition: transform .15s ease, background .15s ease;
+}
+.btn:hover { background: var(--terre-fonce); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.7); }
+.btn-ghost:hover { background: rgba(255,255,255,.14); }
+.btn-mini { padding: 9px 18px; font-size: 14px; }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(247, 242, 233, 0.88); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ligne);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+.logo { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 26px; text-decoration: none; color: var(--encre); }
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a { text-decoration: none; font-size: 15px; color: var(--encre); }
+.nav a:not(.btn):hover { color: var(--terre); }
+
+/* Hero */
+.hero {
+  position: relative; min-height: 78vh; display: flex; align-items: center;
+  background: linear-gradient(120deg, #cdbfa6, #b9a98c), url('images/hero.jpg') center/cover no-repeat;
+  color: #fff; text-align: center; padding: 80px 0;
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(51,48,43,.25), rgba(51,48,43,.45)); }
+.hero-content { position: relative; }
+.hero .kicker { text-transform: uppercase; letter-spacing: 0.24em; font-size: 13px; margin: 0 0 18px; opacity: .95; }
+.hero h1 { font-size: clamp(40px, 7.5vw, 80px); text-shadow: 0 2px 30px rgba(0,0,0,.25); }
+.hero-sous { font-size: clamp(17px, 2.4vw, 21px); max-width: 560px; margin: 20px auto 32px; font-weight: 300; }
+.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* Sections */
+.section { padding: clamp(56px, 9vw, 100px) 0; }
+.section-alt { background: var(--creme-2); }
+.deux-cols { display: grid; grid-template-columns: 1.1fr .9fr; gap: 54px; align-items: center; }
+.signature { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--terre); margin-top: 22px; }
+
+.atouts { list-style: none; margin: 0; padding: 28px; background: var(--creme); border: 1px solid var(--ligne); border-radius: var(--rayon); display: grid; gap: 14px; box-shadow: var(--ombre); }
+.section-alt .atouts { background: #fff; }
+.atouts li { display: flex; align-items: center; gap: 12px; font-size: 16px; }
+.ico { color: var(--terre); font-size: 15px; }
+
+/* Cartes gîtes */
+.cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-top: 40px; }
+.cartes.trois { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.carte-gite { background: #fff; border-radius: var(--rayon); overflow: hidden; box-shadow: var(--ombre); border: 1px solid var(--ligne); display: flex; flex-direction: column; }
+.carte-photo { aspect-ratio: 3/2; background-color: var(--creme-2); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
+.photo-placeholder { color: var(--faded); font-size: 14px; letter-spacing: .04em; background: rgba(255,255,255,.7); padding: 6px 12px; border-radius: 999px; }
+.carte-corps { padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 10px; }
+.carte-meta { color: var(--olive); font-size: 14px; letter-spacing: .04em; margin: 0; }
+.carte-prix { margin: 6px 0 4px; }
+.carte-prix strong { color: var(--terre); font-size: 20px; }
+.carte-gite .btn-mini { align-self: flex-start; margin-top: 6px; }
+
+.carte-info { background: #fff; border: 1px solid var(--ligne); border-radius: var(--rayon); padding: 26px; }
+.section-alt .carte-info { background: var(--creme); }
+.carte-info h3 { color: var(--terre-fonce); margin-bottom: 8px; }
+
+/* Galerie */
+.galerie { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
+.g-item { aspect-ratio: 4/3; border-radius: 12px; background-color: var(--creme-2); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
+
+/* Contact */
+.contact-liste { list-style: none; padding: 0; margin: 22px 0; display: grid; gap: 14px; font-size: 17px; }
+.contact-liste a { color: var(--terre-fonce); text-decoration: none; }
+.contact-liste a:hover { text-decoration: underline; }
+.carte-resa { background: var(--olive); color: #fff; border-radius: var(--rayon); padding: 38px; box-shadow: var(--ombre); }
+.carte-resa h3 { margin-bottom: 12px; }
+.carte-resa .btn { margin-top: 18px; background: #fff; color: var(--olive); }
+.carte-resa .btn:hover { background: var(--creme); }
+
+/* Footer */
+.site-footer { background: var(--encre); color: var(--creme); padding: 30px 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+.footer-inner .mini-note { color: rgba(247, 242, 233, 0.6); }
+
+/* Mobile */
+@media (max-width: 780px) {
+  .nav { gap: 14px; }
+  .nav a:not(.btn) { display: none; }
+  .deux-cols { grid-template-columns: 1fr; gap: 32px; }
+  .galerie { grid-template-columns: repeat(2, 1fr); }
+}
