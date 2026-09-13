@@ -2,7 +2,9 @@
 
 Site vitrine pour la location de gîtes de **Chez Ninou** (Les Cluses, 66).
 Statique (HTML/CSS/JS vanilla, zéro build, zéro dépendance), hébergé sur
-**GitHub Pages** : https://thomas-finkelstein.github.io/chez-ninou/
+**GitHub Pages**, à l'adresse **https://gites-chez-ninou.fr** (domaine acheté
+chez IONOS, HTTPS actif). L'ancienne adresse thomas-finkelstein.github.io/chez-ninou
+et www.gites-chez-ninou.fr y redirigent automatiquement.
 
 ## Parti pris
 À l'arrivée : la grande photo aérienne de la maison, le titre et un gros bouton
@@ -39,8 +41,9 @@ Cormorant Garamond + Jost, palette crème / terracotta / olive / encre.
     visite-poster (vue aérienne, image de départ de la visite), vue-du-ciel.
   - hero-maison.jpg : la vue aérienne agrandie à 1920 px pour l'accueil.
   Les originaux (6000 px) sont dans le zip « Photos HD - Chez Ninou » de Ninou.
+- `CNAME` — contient gites-chez-ninou.fr : c'est ce fichier qui indique le
+  domaine à GitHub Pages. Ne pas le supprimer.
 - `.nojekyll` — sert le site tel quel sur GitHub Pages.
-- `CNAME` — présent seulement si un nom de domaine est branché.
 
 ## Les trois gîtes
 Le Gîte Rez-de-chaussée (dit « Gîte RDC », classé meublé de tourisme 1★ en
@@ -121,7 +124,15 @@ par GitHub Pages en 1 à 2 minutes.
 git add -A && git commit -m "..." && git push
 ```
 
+## Nom de domaine (IONOS)
+Zone DNS de gites-chez-ninou.fr chez IONOS : Domaines & SSL, roue dentée du
+domaine, DNS. Quatre enregistrements A et quatre AAAA sur `@` vers GitHub
+Pages, un CNAME `www` vers thomas-finkelstein.github.io. Les enregistrements
+MX, SPF, DKIM et DMARC d'IONOS sont à conserver : ils servent aux e-mails.
+Le service « Default Site » d'IONOS a dû être détaché pour libérer `@`.
+Si le certificat HTTPS n'est jamais émis, retirer puis remettre le domaine
+dans Settings > Pages du dépôt : cela relance la demande.
+
 ## Idées pour plus tard
 - Calendrier de disponibilités.
 - Envoi du formulaire sans messagerie (Formspree ou équivalent).
-- Nom de domaine personnalisé (ex. chezninou.fr) + HTTPS.
